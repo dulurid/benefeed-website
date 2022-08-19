@@ -1,10 +1,15 @@
 <script setup>
+import { useSinglePrismicDocument } from '@prismicio/vue'
 useHead({
   title: 'Benefeed - Home',
   meta: [
     { name: 'description', content: 'Lorem ipsum dolor sir amet' },
   ],
 })
+
+const { data: document, state, error, refresh } = useSinglePrismicDocument('home_page')
+
+console.log(document)
 </script>
 
 <template>
@@ -56,8 +61,8 @@ useHead({
   <section class="h-auto bg-white">
     <div class="px-10 pt-24 mx-auto max-w-7xl">
       <div class="w-full mx-auto text-left md:text-center">
-        <h1 class="mb-6 text-5xl font-extrabold leading-none max-w-5xl mx-auto tracking-normal text-gray-900 sm:text-6xl md:text-6xl lg:text-7xl md:tracking-tight">
-          The <span class="w-full text-transparent bg-clip-text bg-gradient-to-r from-green-400 via-blue-500 to-purple-500 lg:inline">Number One Source</span> for<br class="lg:block hidden"> all your design needs.
+        <h1 class="mb-8 text-3xl font-extrabold leading-none max-w-5xl mx-auto tracking-normal text-gray-900 sm:text-6xl md:text-4xl lg:text-5xl md:tracking-tight">
+          Kinerja <span class="w-full text-transparent bg-clip-text bg-gradient-to-r from-green-400 via-blue-500 to-purple-500 lg:inline">Investasi</span> dan<br class="lg:block hidden">  watchlist <span class="w-full text-transparent bg-clip-text bg-gradient-to-r from-green-400 via-blue-500 to-purple-500 lg:inline">Benefeed</span> VS IHSG
         </h1>
         <p class="px-0 mb-6 text-lg text-gray-600 md:text-xl lg:px-24">
           Say hello to the number one source for all your design needs. Drag and drop designs, edit designs, and modify the components to help tell your story.
