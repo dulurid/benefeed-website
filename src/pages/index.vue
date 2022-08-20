@@ -1,15 +1,15 @@
 <script setup>
-import { useSinglePrismicDocument } from '@prismicio/vue'
+import ProductSection from '~/components/slices/ProductSection.vue'
+import ProductSectionCode from '~/components/slices/ProductSection.vue?raw'
+
+console.log(ProductSectionCode)
+
 useHead({
   title: 'Benefeed - Home',
   meta: [
     { name: 'description', content: 'Lorem ipsum dolor sir amet' },
   ],
 })
-
-const { data: document, state, error, refresh } = useSinglePrismicDocument('home_page')
-
-console.log(document)
 </script>
 
 <template>
@@ -17,8 +17,8 @@ console.log(document)
     <div class="container max-w-screen-xl mx-auto px-0 md:px-8 xl:px-4 relative">
       <!-- Main Hero Content -->
       <div class="text-center py-12 max-w-2xl md:max-w-3xl mx-auto md:py-16 md:px-0 px-8">
-        <h1 class="mb-8 text-3xl font-extrabold leading-none max-w-5xl mx-auto tracking-normal text-gray-900 sm:text-6xl md:text-4xl lg:text-5xl md:tracking-tight">
-          Belajar <span class="w-full text-transparent bg-clip-text bg-gradient-to-r from-green-400 via-blue-500 to-purple-500 lg:inline">Investasi</span> dan<br class="lg:block hidden"> Pilihan Saham terbaik
+        <h1 class="mb-8">
+          Belajar <span class="--text-gradient">Investasi</span> dan<br class="lg:block hidden"> Pilihan Saham terbaik
         </h1>
 
         <p class="font-normal text-gray-500 text-base mx-auto max-w-2xl lg:text-lg mb-12 poppins md:text-center text-center">
@@ -26,7 +26,7 @@ console.log(document)
         </p>
 
         <div class="flex flex-col sm:flex-row items-center justify-center gap-5">
-          <a href="#_" class="px-7 py-3 sm:w-auto w-full bg-blue-600 text-white font-medium shadow-sm rounded-md hover:bg-blue-600 transform hover:scale-[1.01] transition duration-300">
+          <a href="#_" class="px-7 py-3 sm:w-auto w-full bg-primary-600 text-white font-medium shadow-sm rounded-md hover:bg-primary-600 transform hover:scale-[1.01] transition duration-300">
             Get started today
           </a>
           <a href="#_" class="flex items-center sm:w-auto w-full font-medium justify-center gap-2 px-7 py-3 text-gray-700 shadow-sm border rounded-md hover:bg-gray-50 transform hover:scale-[1.01] transition duration-300">
@@ -61,256 +61,30 @@ console.log(document)
   <section class="h-auto bg-white">
     <div class="px-10 pt-24 mx-auto max-w-7xl">
       <div class="w-full mx-auto text-left md:text-center">
-        <h1 class="mb-8 text-3xl font-extrabold leading-none max-w-5xl mx-auto tracking-normal text-gray-900 sm:text-6xl md:text-4xl lg:text-5xl md:tracking-tight">
-          Kinerja <span class="w-full text-transparent bg-clip-text bg-gradient-to-r from-green-400 via-blue-500 to-purple-500 lg:inline">Investasi</span> dan<br class="lg:block hidden">  watchlist <span class="w-full text-transparent bg-clip-text bg-gradient-to-r from-green-400 via-blue-500 to-purple-500 lg:inline">Benefeed</span> VS IHSG
+        <h1 class="mb-8">
+          Kinerja <span class="--text-gradient">Investasi</span> dan<br class="lg:block hidden">  watchlist <span class="--text-gradient">Benefeed</span> VS IHSG
         </h1>
-        <p class="px-0 mb-6 text-lg text-gray-600 md:text-xl lg:px-24">
+        <p class="px-0 mb-6 text-lg text-gray-600 lg:px-24">
           Say hello to the number one source for all your design needs. Drag and drop designs, edit designs, and modify the components to help tell your story.
         </p>
       </div>
     </div>
-  </section>
-
-  <section class="h-auto bg-white">
     <div class="overflow-hidden relative component_block bg-gradient-to-b from-white to-gray-50">
-      <div class="max-w-7xl pt-8 md:pb-10 lg:pt-16 lg:pb-32 flex flex-col w-full h-full items-center justify-center mx-auto">
+      <div class="max-w-7xl pt-8 md:pb-10 lg:pb-32 flex flex-col w-full h-full items-center justify-center mx-auto">
         <div class="flex items-center h-full w-full rounded-md">
           <div class="lg:grid lg:grid-cols-12 lg:gap-8 flex flex-col w-full items-center pt-10 pb-0 md:pb-10 relative">
-            <div class="px-8 xl:px-5 sm:text-center md:max-w-2xl md:mx-auto lg:col-span-7 lg:text-left">
-              <h1 class="mt-1 text-5xl tracking-tight leading-10 font-extrabold text-gray-900 sm:leading-none sm:text-6xl lg:text-5xl xl:text-7xl">
-                The Free <span class="text-transparent bg-clip-text bg-gradient-to-r from-indigo-600 to-blue-500">LMS</span>
-              </h1>
-              <p class="font-semibold text-5xl sm:text-6xl">
-                for your company
-              </p>
-              <p class="mt-3 text-base text-gray-500 sm:mt-7 sm:text-xl lg:text-lg xl:text-xl lg:pr-32">
-                Learning and educating your team should be fun and enjoyable for employees and managers. <br>
-              </p>
-              <div class="mt-5 sm:mt-8 sm:flex sm:justify-center lg:justify-start">
-                <button class="w-full sm:w-auto shadow flex items-center justify-center px-8 py-3 border border-transparent text-base leading-6 font-bold rounded-full text-white bg-gradient-to-r from-indigo-600 to-blue-500 hover:from-indigo-500 hover:to-blue-400 focus:outline-none transition duration-150 ease-in-out md:py-4 md:text-base cursor-pointer focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">
-                  Sign Up Today
-                </button>
-                <div class="mt-3 cursor-pointer sm:mt-0 sm:ml-3">
-                  <div href="/pricing" class="w-full flex items-center relative justify-center pl-12 pr-8 py-3 border border-gray-100 text-base leading-6 font-bold rounded-full text-indigo-500 bg-gray-100 hover:text-indigo-400 hover:bg-gray-200 focus:outline-none focus:shadow-outline-indigo focus:border-gray-100 transition duration-150 ease-in-out md:py-4 md:text-base cursor-pointer">
-                    <span class="text-3xl absolute left-0 ml-3 sm:block hidden">🍿</span>
-                    <span class="">See How It Works</span>
-                  </div>
-                </div>
-              </div>
-              <p class="text-sm text-gray-400 mb-4 font-medium mt-8">
-                <span class="text-indigo-500 sm:mr-2 sm:ml-2">Free, for up to 50 users.</span> Setup in less than 15 minutes.
-              </p>
-            </div>
-            <div class="mt-12 pr-0 lg:pr-2 relative w-full sm:max-w-lg sm:mx-auto justify-center lg:mt-0 lg:max-w-none lg:mx-0 lg:col-span-5 lg:flex lg:items-center">
+            <div class="col-span-12">
               <div class="bg-transparent p-2 relative">
-                <div class="absolute inset-0 opacity-30 blur-xl animate-pulse" style="background-image:linear-gradient(120deg, #5145cd -0.55%, #37BDF9 22.86%, #37BDF9 48.36%, #17BC9B 73.33%, #17BC9B 99.34%)" />
-                <div class="bg-white sm:max-w-md py-10 px-10 sm:w-full relative sm:mx-auto sm:rounded-lg sm:overflow-hidden">
-                  <div>
-                    <div class="mx-auto w-full max-w-sm">
-                      <div class="mx-auto w-full max-w-sm">
-                        <div class="flex w-full items-center text-indigo-700">
-                          <h2 class="text-xl font-bold text-gray-700">
-                            Voted the BEST LMS. Find out Why 👇
-                          </h2>
-                        </div>
-                        <div class="mt-5">
-                          <div class="mt-5">
-                            <form onsubmit="e.preventDefault()" class="">
-                              <div class="mb-5">
-                                <div class="grid grid-cols-2">
-                                  <label for="first_name" class="col-span-1 block text-sm font-medium leading-5 text-gray-600">
-                                    First Name
-                                  </label>
-                                  <label for="last_name" class="col-span-1 ml-2 block text-sm font-medium leading-5 text-gray-600">
-                                    Last Name
-                                  </label>
-                                </div>
-                                <div class="mt-1 flex grid grid-cols-2 gap-4">
-                                  <div class="rounded-md shadow-sm">
-                                    <input name="first_name" type="text" class="col-span-1 appearance-none block w-full px-3 py-2 border border-gray-300 rounded-md placeholder-gray-400 focus:outline-none focus:shadow-outline-blue focus:border-indigo-300 transition duration-150 ease-in-out sm:text-sm sm:leading-5" style="background-image: url(&quot;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAfBJREFUWAntVk1OwkAUZkoDKza4Utm61iP0AqyIDXahN2BjwiHYGU+gizap4QDuegWN7lyCbMSlCQjU7yO0TOlAi6GwgJc0fT/fzPfmzet0crmD7HsFBAvQbrcrw+Gw5fu+AfOYvgylJ4TwCoVCs1ardYTruqfj8fgV5OUMSVVT93VdP9dAzpVvm5wJHZFbg2LQ2pEYOlZ/oiDvwNcsFoseY4PBwMCrhaeCJyKWZU37KOJcYdi27QdhcuuBIb073BvTNL8ln4NeeR6NRi/wxZKQcGurQs5oNhqLshzVTMBewW/LMU3TTNlO0ieTiStjYhUIyi6DAp0xbEdgTt+LE0aCKQw24U4llsCs4ZRJrYopB6RwqnpA1YQ5NGFZ1YQ41Z5S8IQQdP5laEBRJcD4Vj5DEsW2gE6s6g3d/YP/g+BDnT7GNi2qCjTwGd6riBzHaaCEd3Js01vwCPIbmWBRx1nwAN/1ov+/drgFWIlfKpVukyYihtgkXNp4mABK+1GtVr+SBhJDbBIubVw+Cd/TDgKO2DPiN3YUo6y/nDCNEIsqTKH1en2tcwA9FKEItyDi3aIh8Gl1sRrVnSDzNFDJT1bAy5xpOYGn5fP5JuL95ZjMIn1ya7j5dPGfv0A5eAnpZUY3n5jXcoec5J67D9q+VuAPM47D3XaSeL4AAAAASUVORK5CYII=&quot;); background-repeat: no-repeat; background-attachment: scroll; background-size: 16px 18px; background-position: 98% 50%;">
-                                  </div>
-                                  <div class="rounded-md shadow-sm">
-                                    <input name="last_name" type="text" class="col-span-1 appearance-none block w-full px-3 py-2 border border-gray-300 rounded-md placeholder-gray-400 focus:outline-none focus:shadow-outline-blue focus:border-indigo-300 transition duration-150 ease-in-out sm:text-sm sm:leading-5">
-                                  </div>
-                                </div>
-                                <div class="mt-1" />
-                              </div>
-                              <div>
-                                <label for="email" class="block text-sm font-medium leading-5 text-gray-600">
-                                  Business Email Address
-                                </label>
-                                <div class="mt-1 rounded-md shadow-sm">
-                                  <input name="email" type="email" class="appearance-none block w-full px-3 py-2 border border-gray-300 rounded-md placeholder-gray-400 focus:outline-none focus:shadow-outline-blue focus:border-indigo-300 transition duration-150 ease-in-out sm:text-sm sm:leading-5">
-                                </div>
-                              </div>
-                              <div class="mt-6">
-                                <button type="submit" class="w-full flex justify-center py-3 px-4 border border-transparent rounded-full shadow-sm text-base font-medium text-white bg-gradient-to-r from-indigo-600 to-blue-500 hover:from-indigo-500 hover:to-blue-400 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">
-                                  Create My Free Account
-                                </button>
-                              </div>
-                            </form>
-                            <div class="pt-6 px-2 sm:block hidden">
-                              <p class="text-xs leading-5 text-gray-500">
-                                Everything you need for an internal learning management system for your team and employees.
-                              </p>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
+                <div class="absolute inset-0 opacity-10 blur-xl animate-pulse" style="background-image:linear-gradient(120deg, #5145cd -0.55%, #37BDF9 22.86%, #37BDF9 48.36%, #17BC9B 73.33%, #17BC9B 99.34%)" />
+                <div class="bg-white h-[450px] py-10 px-10 sm:w-full relative sm:mx-auto sm:rounded-lg sm:overflow-hidden" />
               </div>
             </div>
-            <img src="https://cdn.devdojo.com/images/august2022/character.png" class="absolute bottom-0 translate-y-40 sm:block hidden left-1/2 ml-40 lg:mb-0 -mb-8 lg:-ml-20 transform w-48 h-auto">
+            <img src="/illustrations/image_1.png" class="absolute bottom-0 translate-y-40 sm:block hidden left-1/2 ml-40 lg:mb-0 -mb-8 lg:-ml-20 transform w-48 h-auto">
           </div>
         </div>
       </div>
     </div>
   </section>
 
-  <section class="w-full bg-white">
-    <div class="py-10 mx-auto max-w-7xl md:px-8">
-      <div>
-        <h1 class="font-bold text-3xl">
-          Our Products
-        </h1>
-      </div>
-      <div class="flex flex-col mt-10 md:flex-row md:mt-8 md:space-x-8">
-        <div
-          class="flex flex-col items-center justify-center flex-1 overflow-hidden text-center bg-gray-100 md:rounded-xl"
-        >
-          <div class="flex flex-col px-10 pb-8 pt-8 sm:px-16">
-            <h3 class="text-xl leading-none">
-              Equity Trading
-            </h3>
-            <p
-              class="mt-5 text-3xl mb-4 font-semibold leading-none tracking-tighter md:text-4xl"
-            >
-              Become a trading partner
-            </p>
-
-            <p class="font-light text-gray-600">
-              Just trade in your eligible computer for credit or recycle it for
-              free. It’s good for you and the planet.
-            </p>
-            <a
-              href="#_"
-              class="bg-primary-500 text-white mt-8 mx-auto inline-block rounded-full px-5 py-1.5"
-            >Learn more
-            </a>
-          </div>
-          <img
-            class="h-[350px] w-auto"
-            src="/illustrations/business-3d-young-people-in-casual-clothes-standing.png"
-          >
-        </div>
-        <div
-          class="flex flex-col items-center justify-center flex-1 overflow-hidden text-center bg-gray-100 md:rounded-xl"
-        >
-          <div class="flex flex-col px-10 pb-8 pt-8 sm:px-16">
-            <h3 class="text-xl leading-none">
-              Fixed Income
-            </h3>
-            <p
-              class="mt-5 text-3xl mb-4 font-semibold leading-none tracking-tighter md:text-4xl"
-            >
-              Better understand fixed income
-            </p>
-
-            <p class="font-light text-gray-600">
-              Just trade in your eligible computer for credit or recycle it for
-              free. It’s good for you and the planet.
-            </p>
-            <a
-              href="#_"
-              class="bg-primary-500 text-white mt-8 mx-auto inline-block rounded-full px-5 py-1.5"
-            >Learn more
-            </a>
-          </div>
-          <img
-            class="h-[350px] w-auto"
-            src="/illustrations/business-3d-close-up-of-businessman-in-dark-blue-suit-giving-thumbs-up.png"
-          >
-        </div>
-      </div>
-      <div class="flex flex-col mt-10 md:flex-row md:mt-8 md:space-x-8">
-        <div
-          class="flex flex-col items-center justify-center flex-1 overflow-hidden text-center bg-gray-100 md:rounded-xl"
-        >
-          <div class="flex flex-col px-10 pb-8 pt-8 sm:px-16">
-            <h3 class="text-xl leading-none">
-              Research
-            </h3>
-            <p
-              class="mt-5 text-3xl mb-4 font-semibold leading-none tracking-tighter md:text-4xl"
-            >
-              Maximizing added value
-            </p>
-
-            <p class="font-light text-gray-600">
-              We provide our clients with a unique perspective, in-depth
-              knowledge, and conviction.
-            </p>
-            <a
-              href="#_"
-              class="bg-primary-500 text-white mt-8 mx-auto inline-block rounded-full px-5 py-1.5"
-            >Learn more
-            </a>
-          </div>
-          <img
-            class="h-[350px] w-auto"
-            src="/illustrations/business-3d-close-up-of-businesswoman-in-red-suit-with-paper-coffee-cup.png"
-          >
-        </div>
-        <div
-          class="flex flex-col items-center justify-center flex-1 overflow-hidden text-center bg-gray-100 md:rounded-xl"
-        >
-          <div class="flex flex-col px-10 pb-8 pt-8 sm:px-16">
-            <h3 class="text-xl leading-none">
-              Investment Banking
-            </h3>
-            <p
-              class="mt-5 text-3xl mb-4 font-semibold leading-none tracking-tighter md:text-4xl"
-            >
-              Achieve short & long term goals
-            </p>
-
-            <p class="font-light text-gray-600">
-              Our investment banking team brings a wealth of experience and a
-              vast network with one-goal in mind: to maximize value.
-            </p>
-            <a
-              href="#_"
-              class="bg-primary-500 text-white mt-8 mx-auto inline-block rounded-full px-5 py-1.5"
-            >Learn more
-            </a>
-          </div>
-          <img class="h-[350px] w-auto" src="/illustrations/old-man.png">
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section class="w-full px-10 py-12 bg-white lg:py-20">
-    <div class="relative flex max-w-5xl px-24 py-16 mx-auto bg-indigo-500 rounded-lg lg:py-20">
-      <div class="flex">
-        <div class="relative z-50 md:w-7/12">
-          <svg class="absolute w-6 h-auto -ml-10 text-indigo-400 fill-current" viewBox="0 0 100 84" xmlns="http://www.w3.org/2000/svg"><path d="M40.87 0C28.12 0 18.117 3.91 10.873 11.826 3.613 19.742 0 32.09 0 48.913v34.941H42.032V46.112H21.745c0-9.242 1.509-16.114 4.468-20.613 2.959-4.5 7.838-6.762 14.656-6.762V0zm57.64 0c-6.375 0-12.052.938-17.039 2.86-4.987 1.922-9.271 4.866-12.78 8.877-3.507 4.026-6.196 9.133-8.071 15.34-1.861 6.223-2.8 13.478-2.8 21.836v34.941H100V46.112H79.744c0-9.242 1.48-16.114 4.438-20.613 2.959-4.5 7.74-6.762 14.328-6.762V0z" /></svg>
-          <blockquote class="text-2xl font-thin text-white lg:text-3xl">
-            Saved me so much time! I would highly recommend this tool to all my friends and co-workers.
-          </blockquote>
-          <p class="mt-3 text-sm text-indigo-300">
-            Jake Smith, Founder @ DevStudio Inc.
-          </p>
-          <p class="mt-10 text-xs text-indigo-300">
-            Want to see it in action? No credit card required.
-          </p>
-          <a href="#_" class="inline-block w-full px-10 py-3 mt-4 text-base font-medium text-center text-indigo-500 bg-gray-100 rounded md:w-auto">Start your free 14-day trial</a>
-        </div>
-      </div>
-      <img src="https://cdn.devdojo.com/images/august2021/user-bg.png" class="absolute bottom-0 right-0 z-20 block h-full mr-6 origin-bottom transform scale-90 opacity-10 lg:hidden lg:mr-12">
-      <img src="https://cdn.devdojo.com/images/august2021/user-bg.png" class="absolute bottom-0 right-0 z-20 hidden h-full mr-6 origin-bottom transform scale-110 lg:block lg:mr-12">
-    </div>
-  </section>
+  <ProductSection />
 </template>

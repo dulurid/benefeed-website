@@ -9,6 +9,7 @@ import AutoImport from 'unplugin-auto-import/vite'
 import { VitePWA } from 'vite-plugin-pwa'
 import VueI18n from '@intlify/vite-plugin-vue-i18n'
 import Inspect from 'vite-plugin-inspect'
+import raw from './raw.js'
 
 export default defineConfig({
   resolve: {
@@ -97,6 +98,7 @@ export default defineConfig({
     // https://github.com/antfu/vite-plugin-inspect
     // Visit http://localhost:3333/__inspect/ to see the inspector
     Inspect(),
+    raw(),
   ],
 
   // https://github.com/vitest-dev/vitest
