@@ -105,6 +105,7 @@ declare global {
   const unref: typeof import('vue')['unref']
   const unrefElement: typeof import('@vueuse/core')['unrefElement']
   const until: typeof import('@vueuse/core')['until']
+  const useAboutStore: typeof import('./store/aboust.stores')['useAboutStore']
   const useActiveElement: typeof import('@vueuse/core')['useActiveElement']
   const useArrayEvery: typeof import('@vueuse/core')['useArrayEvery']
   const useArrayFilter: typeof import('@vueuse/core')['useArrayFilter']
@@ -167,6 +168,7 @@ declare global {
   const useGeolocation: typeof import('@vueuse/core')['useGeolocation']
   const useHead: typeof import('@vueuse/head')['useHead']
   const useHome: typeof import('./composables/useHome')['useHome']
+  const useHomeStore: typeof import('./store/home.stores')['useHomeStore']
   const useI18n: typeof import('vue-i18n')['useI18n']
   const useIdle: typeof import('@vueuse/core')['useIdle']
   const useImage: typeof import('@vueuse/core')['useImage']
@@ -379,6 +381,7 @@ declare module '@vue/runtime-core' {
     readonly unref: UnwrapRef<typeof import('vue')['unref']>
     readonly unrefElement: UnwrapRef<typeof import('@vueuse/core')['unrefElement']>
     readonly until: UnwrapRef<typeof import('@vueuse/core')['until']>
+    readonly useAboutStore: UnwrapRef<typeof import('./store/aboust.stores')['useAboutStore']>
     readonly useActiveElement: UnwrapRef<typeof import('@vueuse/core')['useActiveElement']>
     readonly useArrayEvery: UnwrapRef<typeof import('@vueuse/core')['useArrayEvery']>
     readonly useArrayFilter: UnwrapRef<typeof import('@vueuse/core')['useArrayFilter']>
@@ -441,6 +444,7 @@ declare module '@vue/runtime-core' {
     readonly useGeolocation: UnwrapRef<typeof import('@vueuse/core')['useGeolocation']>
     readonly useHead: UnwrapRef<typeof import('@vueuse/head')['useHead']>
     readonly useHome: UnwrapRef<typeof import('./composables/useHome')['useHome']>
+    readonly useHomeStore: UnwrapRef<typeof import('./store/home.stores')['useHomeStore']>
     readonly useI18n: UnwrapRef<typeof import('vue-i18n')['useI18n']>
     readonly useIdle: UnwrapRef<typeof import('@vueuse/core')['useIdle']>
     readonly useImage: UnwrapRef<typeof import('@vueuse/core')['useImage']>

@@ -26,5 +26,11 @@ useHead({
 </script>
 
 <template>
-  <RouterView />
+  <Suspense>
+    <RouterView />
+
+    <template #fallback>
+      <div class=" flex items-center justify-center h-screen" />
+    </template>
+  </Suspense>
 </template>
