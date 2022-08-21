@@ -27,7 +27,6 @@ useHead({
               </h1>
               <p class="text-sm leading-5 font-normal text-neutral-800 text-justify">
                 {{ asText(about.heros.description) }}
-                {{ asImageSrc(about.heros.image) }}
               </p>
             </div>
 
