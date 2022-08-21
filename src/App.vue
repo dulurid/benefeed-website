@@ -17,6 +17,10 @@ useHead({
       type: 'image/svg+xml',
       href: computed(() => preferredDark.value ? '/favicon-dark.svg' : '/favicon.svg'),
     },
+    {
+      property: 'og:image',
+      content: '/preview.png',
+    },
   ],
 })
 </script>

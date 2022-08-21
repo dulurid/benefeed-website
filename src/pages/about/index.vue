@@ -3,10 +3,6 @@ useHead({
   title: 'Benefeed - About',
   meta: [
     { name: 'description', content: 'Lorem Ipsum adalah contoh teks atau dummy dalam industri percetakan dan penataan huruf atau typesetting' },
-    {
-      property: 'og:image',
-      content: 'https://benefeed-website.vercel.app/preview.png',
-    },
   ],
 })
 </script>
