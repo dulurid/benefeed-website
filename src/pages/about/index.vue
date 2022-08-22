@@ -1,9 +1,15 @@
 <script setup>
+import { usePrismic } from '@prismicio/vue'
+import { useAboutStore } from '~/store/about.stores'
 const title = ref()
 
 const { isFetching, error, data } = await useFetch('https://jsonplaceholder.typicode.com/users/1')
 
 console.log(JSON.parse(data.value).name)
+
+const { asText, asImageSrc } = usePrismic()
+const about = useAboutStore()
+about.fetchAboutDocument()
 
 useHead({
   title: `${JSON.parse(data.value).name} Benefeed - About`,
@@ -14,102 +20,126 @@ useHead({
 </script>
 
 <template>
-  <section class="text-gray-600 body-font">
-    <div class="container px-5 py-24 mx-auto flex flex-wrap">
-      <div class="flex flex-wrap -mx-4 mt-auto mb-auto lg:w-1/2 sm:w-2/3 content-start sm:pr-10">
-        <div class="w-full sm:p-4 px-4 mb-6">
-          <h1 class="title-font font-medium text-xl mb-2 text-gray-900">
-            Moon hashtag pop-up try-hard offal truffaut
-          </h1>
-          <div class="leading-relaxed">
-            Pour-over craft beer pug drinking vinegar live-edge gastropub, keytar neutra sustainable fingerstache kickstarter.
+  <section class="">
+    <div class="bg-white">
+      <div class="bg-neutral-50">
+        <div class="container m-auto px-6">
+          <div class="items-center justify-between p-5 lg:flex">
+            <div class=" lg:w-6/12 lg:p-0">
+              <h1 class="mb-3 text-4xl text-left font-bold capitalize leading-none text-neutral-900 sm:text-4xl">
+                {{ asText(about.heros.title) }}
+                <hr>
+              </h1>
+              <p class="text-sm leading-5 font-normal text-neutral-800 text-justify">
+                {{ asText(about.heros.description) }}
+              </p>
+            </div>
+
+            <div class="scale-100 lg:w-4/12">
+              <div data-v-5634ab58="" class="w-full max-w-md transform translate-y-10 relative ml-24">
+                <div data-v-5634ab58="" class="absolute inset-0 lg:pr-24 pb-20">
+                  <div
+                    data-v-5634ab58=""
+                    class="w-full h-full bg-gradient-to-br from-primary-300 to-primary-500 rounded-3xl shadow-2xl"
+                  />
+                </div>
+                <img
+                  :src="asImageSrc(about.heros.image)" alt=""
+                  class="lg:-ml-12 transform lg:mt-8 -translate-y-20 rounded-3xl w-[350px] h-auto"
+                >
+              </div>
+            </div>
           </div>
         </div>
-        <div class="p-4 sm:w-1/2 lg:w-1/4 w-1/2">
-          <h2 class="title-font font-medium text-3xl text-gray-900">
-            2.7K
-          </h2>
-          <p class="leading-relaxed">
-            Users
-          </p>
-        </div>
-        <div class="p-4 sm:w-1/2 lg:w-1/4 w-1/2">
-          <h2 class="title-font font-medium text-3xl text-gray-900">
-            1.8K
-          </h2>
-          <p class="leading-relaxed">
-            Subscribes
-          </p>
-        </div>
-        <div class="p-4 sm:w-1/2 lg:w-1/4 w-1/2">
-          <h2 class="title-font font-medium text-3xl text-gray-900">
-            35
-          </h2>
-          <p class="leading-relaxed">
-            Downloads
-          </p>
-        </div>
-        <div class="p-4 sm:w-1/2 lg:w-1/4 w-1/2">
-          <h2 class="title-font font-medium text-3xl text-gray-900">
-            4
-          </h2>
-          <p class="leading-relaxed">
-            Products
-          </p>
-        </div>
-      </div>
-      <div class="lg:w-1/2 sm:w-1/3 w-full rounded-lg overflow-hidden mt-6 sm:mt-0">
-        <img class="object-cover object-center w-full h-full" src="https://dummyimage.com/600x300" alt="stats">
       </div>
     </div>
   </section>
-  <section class="text-gray-600 body-font">
-    <div class="container px-5 py-24 mx-auto flex flex-wrap">
-      <div class="flex flex-wrap -m-4">
-        <div class="p-4 lg:w-1/2 md:w-full">
-          <div class="flex border-2 rounded-lg border-gray-200 border-opacity-50 p-8 sm:flex-row flex-col">
-            <div class="w-16 h-16 sm:mr-8 sm:mb-0 mb-4 inline-flex items-center justify-center rounded-full bg-primary-100 text-primary-500 flex-shrink-0">
-              <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-8 h-8" viewBox="0 0 24 24">
-                <path d="M22 12h-4l-3 9L9 3l-3 9H2" />
-              </svg>
+
+  <!-- Our Teams -->
+  <section>
+    <div class="py-20 bg-green-50">
+      <div class="container mx-auto px-6 md:px-12 xl:px-32">
+        <div class="mb-16 text-center">
+          <h2 class="mb-4 text-center text-2xl text-gray-900 font-bold md:text-4xl">
+            Our Teams
+          </h2>
+          <p class="text-gray-600 lg:w-8/12 lg:mx-auto">
+            Tailus prides itself not only on award-winning technology, but also on the talent of its people of some of the brightest minds and most experienced executives in business.
+          </p>
+        </div>
+        <div class="grid gap-12 items-center md:grid-cols-3">
+          <div class="space-y-4 text-center">
+            <img
+              class="w-64 h-64 mx-auto object-cover rounded-xl md:w-40 md:h-40 lg:w-64 lg:h-64 shadow-xl"
+              src="https://tailus.io/sources/blocks/classic/preview/images/woman1.jpg" alt="woman" loading="lazy" width="640" height="805"
+            >
+            <div>
+              <h4 class="text-2xl">
+                Hentoni Doe
+              </h4>
+              <span class="block text-sm text-gray-500">CEO-Founder</span>
             </div>
-            <div class="flex-grow">
-              <h2 class="text-gray-900 text-lg title-font font-medium mb-3">
-                Shooting Stars
-              </h2>
-              <p class="leading-relaxed text-base">
-                Blue bottle crucifix vinyl post-ironic four dollar toast vegan taxidermy. Gastropub indxgo juice poutine.
-              </p>
-              <a class="mt-3 text-primary-500 inline-flex items-center">Learn More
-                <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-4 h-4 ml-2" viewBox="0 0 24 24">
-                  <path d="M5 12h14M12 5l7 7-7 7" />
-                </svg>
-              </a>
+          </div>
+          <div class="space-y-4 text-center">
+            <img
+              class="w-64 h-64 mx-auto object-cover rounded-xl md:w-48 md:h-64 lg:w-64 lg:h-80 shadow-xl"
+              src="https://tailus.io/sources/blocks/classic/preview/images/man.jpg" alt="man" loading="lazy" width="1000" height="667"
+            >
+            <div>
+              <h4 class="text-2xl">
+                Jonathan Doe
+              </h4>
+              <span class="block text-sm text-gray-500">Chief Technical Officer</span>
+            </div>
+          </div>
+          <div class="space-y-4 text-center">
+            <img
+              class="w-64 h-64 mx-auto object-cover rounded-xl md:w-40 md:h-40 lg:w-64 lg:h-64 shadow-xl"
+              src="https://tailus.io/sources/blocks/classic/preview/images/woman.jpg" alt="woman" loading="lazy" width="1000" height="667"
+            >
+            <div>
+              <h4 class="text-2xl">
+                Anabelle Doe
+              </h4>
+              <span class="block text-sm text-gray-500">Chief Operations Officer</span>
             </div>
           </div>
         </div>
-        <div class="p-4 lg:w-1/2 md:w-full">
-          <div class="flex border-2 rounded-lg border-gray-200 border-opacity-50 p-8 sm:flex-row flex-col">
-            <div class="w-16 h-16 sm:mr-8 sm:mb-0 mb-4 inline-flex items-center justify-center rounded-full bg-primary-100 text-primary-500 flex-shrink-0">
-              <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-10 h-10" viewBox="0 0 24 24">
-                <path d="M20 21v-2a4 4 0 00-4-4H8a4 4 0 00-4 4v2" />
-                <circle cx="12" cy="7" r="4" />
-              </svg>
-            </div>
-            <div class="flex-grow">
-              <h2 class="text-gray-900 text-lg title-font font-medium mb-3">
-                The Catalyzer
-              </h2>
-              <p class="leading-relaxed text-base">
-                Blue bottle crucifix vinyl post-ironic four dollar toast vegan taxidermy. Gastropub indxgo juice poutine.
-              </p>
-              <a class="mt-3 text-primary-500 inline-flex items-center">Learn More
-                <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-4 h-4 ml-2" viewBox="0 0 24 24">
-                  <path d="M5 12h14M12 5l7 7-7 7" />
-                </svg>
-              </a>
-            </div>
+      </div>
+    </div>
+  </section>
+  <!-- Vision & Mission -->
+
+  <section class="w-full bg-white">
+    <div class="mx-auto max-w-7xl py-10 md:px-8">
+      <div class="mt-4 flex flex-col md:mt-4 md:flex-row md:space-x-8">
+        <div
+          class="flex flex-1 flex-col items-center justify-center overflow-hidden bg-neutral-50 text-center md:rounded-2xl"
+        >
+          <div class="flex flex-col px-4 pb-8 pt-4 sm:px-16">
+            <h2 class="mt-1 mb-6 text-3xl font-semibold leading-none tracking-tighter md:text-4xl">
+              {{ asText(about.vision.title) }}
+            </h2>
+            <p class="font-light text-gray-600">
+              {{ asText(about.vision.description) }}
+            </p>
           </div>
+          <img class="h-[250px] w-auto" :src="asImageSrc(about.vision.image)">
+        </div>
+
+        <div
+          class="flex flex-1 flex-col items-center justify-center overflow-hidden bg-neutral-50 text-center md:rounded-2xl"
+        >
+          <div class="flex flex-col px-4 pb-8 pt-4 sm:px-16">
+            <h2 class="mt-1 mb-6 text-3xl font-semibold leading-none tracking-tighter md:text-4xl">
+              {{ asText(about.mission.title) }}
+            </h2>
+            <p class="font-light text-gray-600">
+              {{ asText(about.mission.description) }}
+            </p>
+          </div>
+
+          <img class="h-[250px] w-auto" :src="asImageSrc(about.mission.image)">
         </div>
       </div>
     </div>
@@ -117,5 +147,4 @@ useHead({
 </template>
 
 <style lang="scss" scoped>
-
 </style>
