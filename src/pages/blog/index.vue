@@ -8,377 +8,207 @@ useHead({
 </script>
 
 <template>
-  <section class="text-gray-600  body-font">
-    <div class="container mx-auto flex  md:flex-row flex-col items-center  bg-gray-50 rounded-xl">
-      <div class="lg:max-w-lg lg:w-full md:w-1/2 w-5/6">
-        <img class="object-cover object-center rounded-xl" alt="hero" src="https://dummyimage.com/720x600">
+  <section>
+    <!-- Section 1 -->
+    <section class="bg-white">
+      <div class="w-full px-5 py-6 mx-auto space-y-5 sm:py-8 md:py-12 sm:space-y-8 md:space-y-16 max-w-7xl">
+        <div class="flex flex-col items-center sm:px-5 md:flex-row">
+          <div class="w-full md:w-1/2">
+            <a href="#_" class="block">
+              <img
+                data-aos="fade-right"
+                class="object-cover w-full h-full rounded-lg max-h-64 sm:max-h-96 "
+                src="https://cdn.devdojo.com/images/may2021/cupcakes.jpg"
+              >
+            </a>
+          </div>
+          <div class="flex flex-col items-start justify-center w-full h-full py-6 mb-6 md:mb-0 md:w-1/2">
+            <div
+              class="flex flex-col items-start justify-center h-full space-y-3 transform md:pl-10 lg:pl-16 md:space-y-5"
+            >
+              <div
+                class="bg-pink-500 flex items-center pl-2 pr-3 py-1.5 leading-none rounded-full text-xs font-medium uppercase text-white inline-block"
+              >
+                <svg
+                  class="w-3.5 h-3.5 mr-1" fill="currentColor" viewBox="0 0 20 20"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"
+                  />
+                </svg>
+                <span>Featured</span>
+              </div>
+              <h1 class="text-4xl font-bold leading-none lg:text-5xl xl:text-6xl">
+                <a href="#_">Savory Templates. Sweet Designs.</a>
+              </h1>
+              <p class="pt-2 text-sm font-medium">
+                by <a href="#_" class="mr-1 underline">John Doe</a> · <span class="mx-1">April 23rd, 2021</span> · <span
+                  class="mx-1 text-gray-600"
+                >5 min. read</span>
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="flex grid grid-cols-12 pb-10 sm:px-5 gap-x-8 gap-y-16">
+          <div class="flex flex-col items-start col-span-12 space-y-3 sm:col-span-6 xl:col-span-4">
+            <a href="#_" class="block">
+              <img
+                class="object-cover w-full mb-2 overflow-hidden rounded-lg shadow-sm max-h-56"
+                src="https://cdn.devdojo.com/images/may2021/fruit.jpg"
+              >
+            </a>
+            <div
+              class="bg-purple-500 flex items-center px-3 py-1.5 leading-none rounded-full text-xs font-medium uppercase text-white inline-block"
+            >
+              <span>Lifestyle</span>
+            </div>
+            <h2 class="text-lg font-bold sm:text-xl md:text-2xl">
+              <a href="#_">Creating a Future Worth Living</a>
+            </h2>
+            <p class="text-sm text-gray-500">
+              Learn the attributes you need to gain in order to build a future and create a life that you are truly
+              happy with.
+            </p>
+            <p class="pt-2 text-xs font-medium">
+              <a href="#_" class="mr-1 underline">Mary Jane</a> · <span class="mx-1">April 17, 2021</span> · <span
+                class="mx-1 text-gray-600"
+              >3 min. read</span>
+            </p>
+          </div>
+
+          <div class="flex flex-col items-start col-span-12 space-y-3 sm:col-span-6 xl:col-span-4">
+            <a href="#_" class="block">
+              <img
+                class="object-cover w-full mb-2 overflow-hidden rounded-lg shadow-sm max-h-56"
+                src="https://cdn.devdojo.com/images/may2021/workout.jpg"
+              >
+            </a>
+            <div
+              class="bg-pink-500 flex items-center px-3 py-1.5 leading-none rounded-full text-xs font-medium uppercase text-white inline-block"
+            >
+              <span>Health</span>
+            </div>
+            <h2 class="text-lg font-bold sm:text-xl md:text-2xl">
+              The Healther Version of Yourself
+            </h2>
+            <p class="text-sm text-gray-500">
+              If you want to excel in life and become a better version of yourself, you'll need to upgrade your life.
+            </p>
+            <p class="pt-2 text-xs font-medium">
+              <a href="#_" class="mr-1 underline">Fred Jones</a> · <span class="mx-1">April 10, 2021</span> · <span
+                class="mx-1 text-gray-600"
+              >3 min. read</span>
+            </p>
+          </div>
+
+          <div class="flex flex-col items-start col-span-12 space-y-3 sm:col-span-6 xl:col-span-4">
+            <a href="#_" class="block">
+              <img
+                class="object-cover w-full mb-2 overflow-hidden rounded-lg shadow-sm max-h-56"
+                src="https://cdn.devdojo.com/images/may2021/food.jpg"
+              >
+            </a>
+            <div
+              class="bg-red-500 flex items-center px-3 py-1.5 leading-none rounded-full text-xs font-medium uppercase text-white inline-block"
+            >
+              <span>Food</span>
+            </div>
+            <h2 class="text-lg font-bold sm:text-xl md:text-2xl">
+              Enjoy the Meals of the Kings
+            </h2>
+            <p class="text-sm text-gray-500">
+              Take the time to enjoy the life that you've created. It's totally fine to live like kings and eat like
+              royalty.
+            </p>
+            <p class="pt-2 text-xs font-medium">
+              <a href="#_" class="mr-1 underline">Mike Roberts</a> · <span class="mx-1">April 6, 2021</span> · <span
+                class="mx-1 text-gray-600"
+              >3 min. read</span>
+            </p>
+          </div>
+
+          <div class="flex flex-col items-start col-span-12 space-y-3 sm:col-span-6 xl:col-span-4">
+            <a href="#_" class="block">
+              <img
+                class="object-cover w-full mb-2 overflow-hidden rounded-lg max-h-56"
+                src="https://cdn.devdojo.com/images/may2021/books.jpg"
+              >
+            </a>
+            <div
+              class="bg-blue-500 flex items-center px-3 py-1.5 leading-none rounded-full text-xs font-medium uppercase text-white inline-block"
+            >
+              <span>Motivation</span>
+            </div>
+            <h2 class="text-lg font-bold sm:text-xl md:text-2xl">
+              Writing for Success
+            </h2>
+            <p class="text-sm text-gray-500">
+              Writing about your plans for success is extremely helpful for yourself and it will allow you to share your
+              story.
+            </p>
+            <p class="pt-2 text-xs font-medium">
+              <a href="#_" class="mr-1 underline">Tom Johnson</a> · <span class="mx-1">May 25, 2021</span> · <span
+                class="mx-1 text-gray-600"
+              >3 min. read</span>
+            </p>
+          </div>
+
+          <div class="flex flex-col items-start col-span-12 space-y-3 sm:col-span-6 xl:col-span-4">
+            <a href="#_" class="block">
+              <img
+                class="object-cover w-full mb-2 overflow-hidden rounded-lg max-h-56"
+                src="https://cdn.devdojo.com/images/may2021/clock.jpg"
+              >
+            </a>
+            <div
+              class="bg-gray-800 flex items-center px-3 py-1.5 leading-none rounded-full text-xs font-medium uppercase text-white inline-block"
+            >
+              <span>Business</span>
+            </div>
+            <h2 class="text-lg font-bold sm:text-xl md:text-2xl">
+              Simple Time Management
+            </h2>
+            <p class="text-sm text-gray-500">
+              Managing your time can make the difference between getting ahead in life or staying exactly where you are.
+            </p>
+            <p class="pt-2 text-xs font-medium">
+              <a href="#_" class="mr-1 underline">Scott Reedman</a> · <span class="mx-1">May 18, 2021</span> · <span
+                class="mx-1 text-gray-600"
+              >3 min. read</span>
+            </p>
+          </div>
+
+          <div class="flex flex-col items-start col-span-12 space-y-3 sm:col-span-6 xl:col-span-4">
+            <a href="#_" class="block">
+              <img
+                class="object-cover w-full mb-2 overflow-hidden rounded-lg max-h-56"
+                src="https://cdn.devdojo.com/images/may2021/lemons.jpg"
+              >
+            </a>
+            <div
+              class="bg-yellow-400 flex items-center px-3 py-1.5 leading-none rounded-full text-xs font-medium uppercase text-white inline-block"
+            >
+              <span>Nutrition</span>
+            </div>
+            <h2 class="text-lg font-bold sm:text-xl md:text-2xl">
+              The Fruits Life
+            </h2>
+            <p class="text-sm text-gray-500">
+              Take a moment and enjoy to enjoy the many fruits of life. Relaxation and a healthy diet can go a long way.
+            </p>
+            <p class="pt-2 text-xs font-medium">
+              <a href="#_" class="mr-1 underline">Jake Caldwell</a> · <span class="mx-1">May 15, 2021</span> · <span
+                class="mx-1 text-gray-600"
+              >3 min. read</span>
+            </p>
+          </div>
+        </div>
       </div>
-      <div class="lg:flex-grow md:w-1/2 lg:pl-24 md:pr-16 flex flex-col md:items-start md:text-left mb-16 md:mb-0 items-center text-center">
-        <h1 class="title-font sm:text-4xl text-3xl mb-4 font-medium text-gray-900">
-          Before they sold out
-          <br class="hidden lg:inline-block">readymade gluten
-        </h1>
-        <p class="mb-8 leading-relaxed">
-          Copper mug try-hard pitchfork pour-over freegan heirloom neutra air plant cold-pressed tacos poke beard tote bag. Heirloom echo park mlkshk tote bag selvage hot chicken authentic tumeric truffaut hexagon try-hard chambray.
-        </p>
-        <div class="flex justify-center">
-          <button class="inline-flex text-white bg-indigo-500 border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600 rounded text-lg">
-            Load More
-          </button>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section class="text-gray-600 body-font">
-    <div class="container px-5 py-5 mx-auto">
-      <div class="flex flex-wrap -m-4">
-        <!-- start here -->
-        <div class="p-4 md:w-1/3">
-          <div class="h-full border-2 border-gray-200 border-opacity-60 rounded-lg overflow-hidden">
-            <div class="w-full">
-              <div class="w-full flex p-2">
-                <div class="p-2 ">
-                  <img
-                    src="https://firebasestorage.googleapis.com/v0/b/thecaffeinecode.appspot.com/o/Tcc_img%2Flogo.png?alt=media&token=5e5738c4-8ffd-44f9-b47a-57d07e0b7939" alt="author"
-                    class="w-10 h-10 rounded-full overflow-hidden"
-                  >
-                </div>
-                <div class="pl-2 pt-2 ">
-                  <p class="font-bold">
-                    Vipin Bansal
-                  </p>
-                  <p class="text-xs">
-                    2 June 2022
-                  </p>
-                </div>
-              </div>
-            </div>
-
-            <img class="lg:h-48 md:h-36 w-full object-cover object-center" src="https://firebasestorage.googleapis.com/v0/b/thecaffeinecode.appspot.com/o/blog.jpg?alt=media&token=271cb624-94d4-468d-a14d-455377ba75c2" alt="blog cover">
-
-            <div class="p-4">
-              <h2 class="tracking-widest text-xs title-font font-bold text-green-400 mb-1 uppercase ">
-                Web development
-              </h2>
-              <h1 class="title-font text-lg font-medium text-gray-900 mb-3">
-                This is a blog template
-              </h1>
-              <div class="flex items-center flex-wrap ">
-                <a href="/" class="text-green-800  md:mb-2 lg:mb-0">
-                  <p class="inline-flex items-center">Read Blog
-                    <svg class="w-4 h-4 ml-2" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round">
-                      <path d="M5 12h14" />
-                      <path d="M12 5l7 7-7 7" />
-                    </svg>
-                  </p>
-                </a>
-                <span class="text-gray-400 mr-3 inline-flex items-center lg:ml-auto md:ml-0 ml-auto leading-none text-sm pr-3 py-1 border-r-2 border-gray-200">
-                  <svg class="w-4 h-4 mr-1" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                    <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z" />
-                  </svg>
-                  24
-                </span>
-                <span class="text-gray-400 inline-flex items-center leading-none text-sm">
-                  <svg class="w-4 h-4 mr-1" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24">
-                    <path d="M21 11.5a8.38 8.38 0 01-.9 3.8 8.5 8.5 0 01-7.6 4.7 8.38 8.38 0 01-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 01-.9-3.8 8.5 8.5 0 014.7-7.6 8.38 8.38 0 013.8-.9h.5a8.48 8.48 0 018 8v.5z" />
-                  </svg>
-                  89
-                </span>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="p-4 md:w-1/3">
-          <div class="h-full border-2 border-gray-200 border-opacity-60 rounded-lg overflow-hidden">
-            <div class="w-full">
-              <div class="w-full flex p-2">
-                <div class="p-2 ">
-                  <img
-                    src="https://firebasestorage.googleapis.com/v0/b/thecaffeinecode.appspot.com/o/Tcc_img%2Flogo.png?alt=media&token=5e5738c4-8ffd-44f9-b47a-57d07e0b7939" alt="author"
-                    class="w-10 h-10 rounded-full overflow-hidden"
-                  >
-                </div>
-                <div class="pl-2 pt-2 ">
-                  <p class="font-bold">
-                    Vipin Bansal
-                  </p>
-                  <p class="text-xs">
-                    2 June 2022
-                  </p>
-                </div>
-              </div>
-            </div>
-
-            <img class="lg:h-48 md:h-36 w-full object-cover object-center" src="https://firebasestorage.googleapis.com/v0/b/thecaffeinecode.appspot.com/o/blog.jpg?alt=media&token=271cb624-94d4-468d-a14d-455377ba75c2" alt="blog cover">
-
-            <div class="p-4">
-              <h2 class="tracking-widest text-xs title-font font-bold text-green-400 mb-1 uppercase ">
-                Web development
-              </h2>
-              <h1 class="title-font text-lg font-medium text-gray-900 mb-3">
-                This is a blog template
-              </h1>
-              <div class="flex items-center flex-wrap ">
-                <a href="/" class="text-green-800  md:mb-2 lg:mb-0">
-                  <p class="inline-flex items-center">Read Blog
-                    <svg class="w-4 h-4 ml-2" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round">
-                      <path d="M5 12h14" />
-                      <path d="M12 5l7 7-7 7" />
-                    </svg>
-                  </p>
-                </a>
-                <span class="text-gray-400 mr-3 inline-flex items-center lg:ml-auto md:ml-0 ml-auto leading-none text-sm pr-3 py-1 border-r-2 border-gray-200">
-                  <svg class="w-4 h-4 mr-1" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                    <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z" />
-                  </svg>
-                  24
-                </span>
-                <span class="text-gray-400 inline-flex items-center leading-none text-sm">
-                  <svg class="w-4 h-4 mr-1" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24">
-                    <path d="M21 11.5a8.38 8.38 0 01-.9 3.8 8.5 8.5 0 01-7.6 4.7 8.38 8.38 0 01-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 01-.9-3.8 8.5 8.5 0 014.7-7.6 8.38 8.38 0 013.8-.9h.5a8.48 8.48 0 018 8v.5z" />
-                  </svg>
-                  89
-                </span>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="p-4 md:w-1/3">
-          <div class="h-full border-2 border-gray-200 border-opacity-60 rounded-lg overflow-hidden">
-            <div class="w-full">
-              <div class="w-full flex p-2">
-                <div class="p-2 ">
-                  <img
-                    src="https://firebasestorage.googleapis.com/v0/b/thecaffeinecode.appspot.com/o/Tcc_img%2Flogo.png?alt=media&token=5e5738c4-8ffd-44f9-b47a-57d07e0b7939" alt="author"
-                    class="w-10 h-10 rounded-full overflow-hidden"
-                  >
-                </div>
-                <div class="pl-2 pt-2 ">
-                  <p class="font-bold">
-                    Vipin Bansal
-                  </p>
-                  <p class="text-xs">
-                    2 June 2022
-                  </p>
-                </div>
-              </div>
-            </div>
-
-            <img class="lg:h-48 md:h-36 w-full object-cover object-center" src="https://firebasestorage.googleapis.com/v0/b/thecaffeinecode.appspot.com/o/blog.jpg?alt=media&token=271cb624-94d4-468d-a14d-455377ba75c2" alt="blog cover">
-
-            <div class="p-4">
-              <h2 class="tracking-widest text-xs title-font font-bold text-green-400 mb-1 uppercase ">
-                Web development
-              </h2>
-              <h1 class="title-font text-lg font-medium text-gray-900 mb-3">
-                This is a blog template
-              </h1>
-              <div class="flex items-center flex-wrap ">
-                <a href="/" class="text-green-800  md:mb-2 lg:mb-0">
-                  <p class="inline-flex items-center">Read Blog
-                    <svg class="w-4 h-4 ml-2" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round">
-                      <path d="M5 12h14" />
-                      <path d="M12 5l7 7-7 7" />
-                    </svg>
-                  </p>
-                </a>
-                <span class="text-gray-400 mr-3 inline-flex items-center lg:ml-auto md:ml-0 ml-auto leading-none text-sm pr-3 py-1 border-r-2 border-gray-200">
-                  <svg class="w-4 h-4 mr-1" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                    <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z" />
-                  </svg>
-                  24
-                </span>
-                <span class="text-gray-400 inline-flex items-center leading-none text-sm">
-                  <svg class="w-4 h-4 mr-1" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24">
-                    <path d="M21 11.5a8.38 8.38 0 01-.9 3.8 8.5 8.5 0 01-7.6 4.7 8.38 8.38 0 01-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 01-.9-3.8 8.5 8.5 0 014.7-7.6 8.38 8.38 0 013.8-.9h.5a8.48 8.48 0 018 8v.5z" />
-                  </svg>
-                  89
-                </span>
-              </div>
-            </div>
-          </div>
-        </div>
-        <!-- End here -->
-      </div>
-    </div>
-  </section>
-
-  <section class="text-gray-600 body-font">
-    <div class="container px-5 py-5 mx-auto">
-      <div class="flex flex-wrap -m-4">
-        <!-- start here -->
-        <div class="p-4 md:w-1/3">
-          <div class="h-full border-2 border-gray-200 border-opacity-60 rounded-lg overflow-hidden">
-            <div class="w-full">
-              <div class="w-full flex p-2">
-                <div class="p-2 ">
-                  <img
-                    src="https://firebasestorage.googleapis.com/v0/b/thecaffeinecode.appspot.com/o/Tcc_img%2Flogo.png?alt=media&token=5e5738c4-8ffd-44f9-b47a-57d07e0b7939" alt="author"
-                    class="w-10 h-10 rounded-full overflow-hidden"
-                  >
-                </div>
-                <div class="pl-2 pt-2 ">
-                  <p class="font-bold">
-                    Vipin Bansal
-                  </p>
-                  <p class="text-xs">
-                    2 June 2022
-                  </p>
-                </div>
-              </div>
-            </div>
-
-            <img class="lg:h-48 md:h-36 w-full object-cover object-center" src="https://firebasestorage.googleapis.com/v0/b/thecaffeinecode.appspot.com/o/blog.jpg?alt=media&token=271cb624-94d4-468d-a14d-455377ba75c2" alt="blog cover">
-
-            <div class="p-4">
-              <h2 class="tracking-widest text-xs title-font font-bold text-green-400 mb-1 uppercase ">
-                Web development
-              </h2>
-              <h1 class="title-font text-lg font-medium text-gray-900 mb-3">
-                This is a blog template
-              </h1>
-              <div class="flex items-center flex-wrap ">
-                <a href="/" class="text-green-800  md:mb-2 lg:mb-0">
-                  <p class="inline-flex items-center">Read Blog
-                    <svg class="w-4 h-4 ml-2" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round">
-                      <path d="M5 12h14" />
-                      <path d="M12 5l7 7-7 7" />
-                    </svg>
-                  </p>
-                </a>
-                <span class="text-gray-400 mr-3 inline-flex items-center lg:ml-auto md:ml-0 ml-auto leading-none text-sm pr-3 py-1 border-r-2 border-gray-200">
-                  <svg class="w-4 h-4 mr-1" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                    <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z" />
-                  </svg>
-                  24
-                </span>
-                <span class="text-gray-400 inline-flex items-center leading-none text-sm">
-                  <svg class="w-4 h-4 mr-1" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24">
-                    <path d="M21 11.5a8.38 8.38 0 01-.9 3.8 8.5 8.5 0 01-7.6 4.7 8.38 8.38 0 01-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 01-.9-3.8 8.5 8.5 0 014.7-7.6 8.38 8.38 0 013.8-.9h.5a8.48 8.48 0 018 8v.5z" />
-                  </svg>
-                  89
-                </span>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="p-4 md:w-1/3">
-          <div class="h-full border-2 border-gray-200 border-opacity-60 rounded-lg overflow-hidden">
-            <div class="w-full">
-              <div class="w-full flex p-2">
-                <div class="p-2 ">
-                  <img
-                    src="https://firebasestorage.googleapis.com/v0/b/thecaffeinecode.appspot.com/o/Tcc_img%2Flogo.png?alt=media&token=5e5738c4-8ffd-44f9-b47a-57d07e0b7939" alt="author"
-                    class="w-10 h-10 rounded-full overflow-hidden"
-                  >
-                </div>
-                <div class="pl-2 pt-2 ">
-                  <p class="font-bold">
-                    Vipin Bansal
-                  </p>
-                  <p class="text-xs">
-                    2 June 2022
-                  </p>
-                </div>
-              </div>
-            </div>
-
-            <img class="lg:h-48 md:h-36 w-full object-cover object-center" src="https://firebasestorage.googleapis.com/v0/b/thecaffeinecode.appspot.com/o/blog.jpg?alt=media&token=271cb624-94d4-468d-a14d-455377ba75c2" alt="blog cover">
-
-            <div class="p-4">
-              <h2 class="tracking-widest text-xs title-font font-bold text-green-400 mb-1 uppercase ">
-                Web development
-              </h2>
-              <h1 class="title-font text-lg font-medium text-gray-900 mb-3">
-                This is a blog template
-              </h1>
-              <div class="flex items-center flex-wrap ">
-                <a href="/" class="text-green-800  md:mb-2 lg:mb-0">
-                  <p class="inline-flex items-center">Read Blog
-                    <svg class="w-4 h-4 ml-2" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round">
-                      <path d="M5 12h14" />
-                      <path d="M12 5l7 7-7 7" />
-                    </svg>
-                  </p>
-                </a>
-                <span class="text-gray-400 mr-3 inline-flex items-center lg:ml-auto md:ml-0 ml-auto leading-none text-sm pr-3 py-1 border-r-2 border-gray-200">
-                  <svg class="w-4 h-4 mr-1" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                    <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z" />
-                  </svg>
-                  24
-                </span>
-                <span class="text-gray-400 inline-flex items-center leading-none text-sm">
-                  <svg class="w-4 h-4 mr-1" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24">
-                    <path d="M21 11.5a8.38 8.38 0 01-.9 3.8 8.5 8.5 0 01-7.6 4.7 8.38 8.38 0 01-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 01-.9-3.8 8.5 8.5 0 014.7-7.6 8.38 8.38 0 013.8-.9h.5a8.48 8.48 0 018 8v.5z" />
-                  </svg>
-                  89
-                </span>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="p-4 md:w-1/3">
-          <div class="h-full border-2 border-gray-200 border-opacity-60 rounded-lg overflow-hidden">
-            <div class="w-full">
-              <div class="w-full flex p-2">
-                <div class="p-2 ">
-                  <img
-                    src="https://firebasestorage.googleapis.com/v0/b/thecaffeinecode.appspot.com/o/Tcc_img%2Flogo.png?alt=media&token=5e5738c4-8ffd-44f9-b47a-57d07e0b7939" alt="author"
-                    class="w-10 h-10 rounded-full overflow-hidden"
-                  >
-                </div>
-                <div class="pl-2 pt-2 ">
-                  <p class="font-bold">
-                    Vipin Bansal
-                  </p>
-                  <p class="text-xs">
-                    2 June 2022
-                  </p>
-                </div>
-              </div>
-            </div>
-
-            <img class="lg:h-48 md:h-36 w-full object-cover object-center" src="https://firebasestorage.googleapis.com/v0/b/thecaffeinecode.appspot.com/o/blog.jpg?alt=media&token=271cb624-94d4-468d-a14d-455377ba75c2" alt="blog cover">
-
-            <div class="p-4">
-              <h2 class="tracking-widest text-xs title-font font-bold text-green-400 mb-1 uppercase ">
-                Web development
-              </h2>
-              <h1 class="title-font text-lg font-medium text-gray-900 mb-3">
-                This is a blog template
-              </h1>
-              <div class="flex items-center flex-wrap ">
-                <a href="/" class="text-green-800  md:mb-2 lg:mb-0">
-                  <p class="inline-flex items-center">Read Blog
-                    <svg class="w-4 h-4 ml-2" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round">
-                      <path d="M5 12h14" />
-                      <path d="M12 5l7 7-7 7" />
-                    </svg>
-                  </p>
-                </a>
-                <span class="text-gray-400 mr-3 inline-flex items-center lg:ml-auto md:ml-0 ml-auto leading-none text-sm pr-3 py-1 border-r-2 border-gray-200">
-                  <svg class="w-4 h-4 mr-1" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                    <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z" />
-                  </svg>
-                  24
-                </span>
-                <span class="text-gray-400 inline-flex items-center leading-none text-sm">
-                  <svg class="w-4 h-4 mr-1" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24">
-                    <path d="M21 11.5a8.38 8.38 0 01-.9 3.8 8.5 8.5 0 01-7.6 4.7 8.38 8.38 0 01-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 01-.9-3.8 8.5 8.5 0 014.7-7.6 8.38 8.38 0 013.8-.9h.5a8.48 8.48 0 018 8v.5z" />
-                  </svg>
-                  89
-                </span>
-              </div>
-            </div>
-          </div>
-        </div>
-        <!-- End here -->
-      </div>
-    </div>
+    </section>
   </section>
 </template>
 
 <style lang="scss" scoped>
-
 </style>
