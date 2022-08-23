@@ -8,186 +8,372 @@ useHead({
 </script>
 
 <template>
-  <section>
-    <div class="relative mx-auto max-w-7xl px-4">
-      <div class="grid max-w-lg gap-8 mx-auto mt-12 lg:grid-cols-2 lg:max-w-none">
-        <div class="flex flex-col mb-12 overflow-hidden cursor-pointer">
-          <a href="/blog-post">
-            <div class="flex-shrink-0">
-              <img class="object-cover w-full h-48 rounded-lg" src="https://wickedblocks.dev/assets/images/placeholders/neon-2.jpg" alt="">
-            </div>
-          </a>
-          <div class="flex flex-col justify-between flex-1">
-            <a href="/blog-post" />
-            <div class="flex-1">
-              <a href="/blog-post">
-                <div class="flex pt-6 space-x-1 text-sm text-gray-500">
-                  <time datetime="2020-03-10"> Mar 10, 2020 </time>
-                  <span aria-hidden="true"> · </span>
-                  <span> 4 min read </span>
-                </div>
-              </a>
-              <a href="#" class="block mt-2 space-y-6">
-                <h3 class="text-2xl font-semibold leading-none tracking-tighter text-neutral-600">Typography on app.</h3>
-                <p class="text-lg font-normal text-gray-500">Filling text so you can see how it looks like with text. Did I said text?</p>
-                <div class="flex items-center mt-6">
-                  <div>
-                    <img class="inline-block rounded-full h-9 w-9" src="https://wickedblocks.dev/assets/images/placeholders/avatar-bw-1.jpg" alt="">
-                  </div>
-                  <div class="ml-3">
-                    <p class="text-sm font-medium text-gray-700 group-hover:text-neutral-600">Jazz Torp</p>
-                  </div>
-                </div>
-              </a>
-            </div>
-          </div>
-        </div>
-
-        <div class="lg:grid lg:grid-cols-2 lg:gap-8">
-          <div class="flex flex-col mb-12 overflow-hidden cursor-pointer">
-            <a href="/blog-post">
-              <div class="flex-shrink-0">
-                <img class="object-cover w-full h-48 rounded-lg" src="https://wickedblocks.dev/assets/images/placeholders/neon-5.jpg" alt="">
-              </div>
-            </a>
-            <div class="flex flex-col justify-between flex-1">
-              <a href="/blog-post" />
-              <div class="flex-1">
-                <a href="/blog-post">
-                  <div class="flex pt-6 space-x-1 text-sm text-gray-500">
-                    <time datetime="2020-03-10"> Mar 10, 2020 </time>
-                    <span aria-hidden="true"> · </span>
-                    <span> 4 min read </span>
-                  </div>
-                </a>
-                <a href="#" class="block mt-2 space-y-6">
-                  <h3 class="text-2xl font-semibold leading-none tracking-tighter text-neutral-600">Typography on app.</h3>
-                  <p class="text-lg font-normal text-gray-500">Filling text so you can see how it looks like with text. Did I said text?</p>
-
-                  <div class="flex items-center mt-6">
-                    <div>
-                      <img class="inline-block rounded-full h-9 w-9" src="https://wickedblocks.dev/assets/images/placeholders/avatar-bw-2.jpg" alt="">
-                    </div>
-                    <div class="ml-3">
-                      <p class="text-sm font-medium text-gray-700 group-hover:text-neutral-600">Robert Zox</p>
-                    </div>
-                  </div>
-                </a>
-              </div>
-            </div>
-          </div>
-
-          <div class="flex flex-col mb-12 overflow-hidden cursor-pointer">
-            <a href="/blog-post">
-              <div class="flex-shrink-0">
-                <img class="object-cover w-full h-48 rounded-lg" src="https://wickedblocks.dev/assets/images/placeholders/neon-4.jpg" alt="">
-              </div>
-            </a>
-            <div class="flex flex-col justify-between flex-1">
-              <a href="/blog-post" />
-              <div class="flex-1">
-                <a href="/blog-post">
-                  <div class="flex pt-6 space-x-1 text-sm text-gray-500">
-                    <time datetime="2020-03-10"> Mar 10, 2020 </time>
-                    <span aria-hidden="true"> · </span>
-                    <span> 4 min read </span>
-                  </div>
-                </a>
-                <a href="#" class="block mt-2 space-y-6">
-                  <h3 class="text-2xl font-semibold leading-none tracking-tighter text-neutral-600">Typography on app.</h3>
-                  <p class="text-lg font-normal text-gray-500">Filling text so you can see how it looks like with text. Did I said text?</p>
-
-                  <div class="flex items-center mt-6">
-                    <div>
-                      <img class="inline-block rounded-full h-9 w-9" src="https://wickedblocks.dev/assets/images/placeholders/avatar-bw-3.jpg" alt="">
-                    </div>
-                    <div class="ml-3">
-                      <p class="text-sm font-medium text-gray-700 group-hover:text-neutral-600">Thomas Narrow</p>
-                    </div>
-                  </div>
-                </a>
-              </div>
-            </div>
-          </div>
+  <section class="text-gray-600  body-font">
+    <div class="container mx-auto flex  md:flex-row flex-col items-center  bg-gray-50 rounded-xl">
+      <div class="lg:max-w-lg lg:w-full md:w-1/2 w-5/6">
+        <img class="object-cover object-center rounded-xl" alt="hero" src="https://dummyimage.com/720x600">
+      </div>
+      <div class="lg:flex-grow md:w-1/2 lg:pl-24 md:pr-16 flex flex-col md:items-start md:text-left mb-16 md:mb-0 items-center text-center">
+        <h1 class="title-font sm:text-4xl text-3xl mb-4 font-medium text-gray-900">
+          Before they sold out
+          <br class="hidden lg:inline-block">readymade gluten
+        </h1>
+        <p class="mb-8 leading-relaxed">
+          Copper mug try-hard pitchfork pour-over freegan heirloom neutra air plant cold-pressed tacos poke beard tote bag. Heirloom echo park mlkshk tote bag selvage hot chicken authentic tumeric truffaut hexagon try-hard chambray.
+        </p>
+        <div class="flex justify-center">
+          <button class="inline-flex text-white bg-indigo-500 border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600 rounded text-lg">
+            Load More
+          </button>
         </div>
       </div>
     </div>
   </section>
 
-  <section>
-    <div class="relative mx-auto max-w-7xl px-4">
-      <div class="grid max-w-lg gap-12 mx-auto mt-12 lg:grid-cols-3 lg:max-w-none">
-        <div class="flex flex-col mb-12 overflow-hidden cursor-pointer">
-          <a href="/blog-post">
-            <div class="flex-shrink-0">
-              <img class="object-cover w-full h-48 rounded-lg" src="https://wickedblocks.dev/assets/images/placeholders/neon-1.jpg" alt="">
-            </div>
-          </a>
-          <div class="flex flex-col justify-between flex-1">
-            <a href="/blog-post" />
-            <div class="flex-1">
-              <a href="/blog-post">
-                <div class="flex pt-6 space-x-1 text-sm text-gray-500">
-                  <time datetime="2020-03-10"> Mar 10, 2020 </time>
-                  <span aria-hidden="true"> · </span>
-                  <span> 4 min read </span>
+  <section class="text-gray-600 body-font">
+    <div class="container px-5 py-5 mx-auto">
+      <div class="flex flex-wrap -m-4">
+        <!-- start here -->
+        <div class="p-4 md:w-1/3">
+          <div class="h-full border-2 border-gray-200 border-opacity-60 rounded-lg overflow-hidden">
+            <div class="w-full">
+              <div class="w-full flex p-2">
+                <div class="p-2 ">
+                  <img
+                    src="https://firebasestorage.googleapis.com/v0/b/thecaffeinecode.appspot.com/o/Tcc_img%2Flogo.png?alt=media&token=5e5738c4-8ffd-44f9-b47a-57d07e0b7939" alt="author"
+                    class="w-10 h-10 rounded-full overflow-hidden"
+                  >
                 </div>
-              </a>
-              <a href="#" class="block mt-2 space-y-6">
-                <h3 class="text-2xl font-semibold leading-none tracking-tighter text-neutral-600">Typography on app.</h3>
-                <p class="text-lg font-normal text-gray-500">Filling text so you can see how it looks like with text. Did I said text?</p>
-              </a>
+                <div class="pl-2 pt-2 ">
+                  <p class="font-bold">
+                    Vipin Bansal
+                  </p>
+                  <p class="text-xs">
+                    2 June 2022
+                  </p>
+                </div>
+              </div>
             </div>
-          </div>
-        </div>
 
-        <div class="flex flex-col mb-12 overflow-hidden cursor-pointer">
-          <a href="/blog-post">
-            <div class="flex-shrink-0">
-              <img class="object-cover w-full h-48 rounded-lg" src="https://wickedblocks.dev/assets/images/placeholders/neon-2.jpg" alt="">
-            </div>
-          </a>
-          <div class="flex flex-col justify-between flex-1">
-            <a href="/blog-post" />
-            <div class="flex-1">
-              <a href="/blog-post">
-                <div class="flex pt-6 space-x-1 text-sm text-gray-500">
-                  <time datetime="2020-03-10"> Mar 10, 2020 </time>
-                  <span aria-hidden="true"> · </span>
-                  <span> 4 min read </span>
-                </div>
-              </a>
-              <a href="#" class="block mt-2 space-y-6">
-                <h3 class="text-2xl font-semibold leading-none tracking-tighter text-neutral-600">Typography on app.</h3>
-                <p class="text-lg font-normal text-gray-500">Filling text so you can see how it looks like with text. Did I said text?</p>
-              </a>
-            </div>
-          </div>
-        </div>
+            <img class="lg:h-48 md:h-36 w-full object-cover object-center" src="https://firebasestorage.googleapis.com/v0/b/thecaffeinecode.appspot.com/o/blog.jpg?alt=media&token=271cb624-94d4-468d-a14d-455377ba75c2" alt="blog cover">
 
-        <div class="flex flex-col mb-12 overflow-hidden cursor-pointer">
-          <a href="/blog-post">
-            <div class="flex-shrink-0">
-              <img class="object-cover w-full h-48 rounded-lg" src="https://wickedblocks.dev/assets/images/placeholders/neon-3.jpg" alt="">
-            </div>
-          </a>
-          <div class="flex flex-col justify-between flex-1">
-            <a href="/blog-post" />
-            <div class="flex-1">
-              <a href="/blog-post">
-                <div class="flex pt-6 space-x-1 text-sm text-gray-500">
-                  <time datetime="2020-03-10"> Mar 10, 2020 </time>
-                  <span aria-hidden="true"> · </span>
-                  <span> 4 min read </span>
-                </div>
-              </a>
-              <a href="#" class="block mt-2 space-y-6">
-                <h3 class="text-2xl font-semibold leading-none tracking-tighter text-neutral-600">Typography on app.</h3>
-                <p class="text-lg font-normal text-gray-500">Filling text so you can see how it looks like with text. Did I said text?</p>
-              </a>
+            <div class="p-4">
+              <h2 class="tracking-widest text-xs title-font font-bold text-green-400 mb-1 uppercase ">
+                Web development
+              </h2>
+              <h1 class="title-font text-lg font-medium text-gray-900 mb-3">
+                This is a blog template
+              </h1>
+              <div class="flex items-center flex-wrap ">
+                <a href="/" class="text-green-800  md:mb-2 lg:mb-0">
+                  <p class="inline-flex items-center">Read Blog
+                    <svg class="w-4 h-4 ml-2" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                      <path d="M5 12h14" />
+                      <path d="M12 5l7 7-7 7" />
+                    </svg>
+                  </p>
+                </a>
+                <span class="text-gray-400 mr-3 inline-flex items-center lg:ml-auto md:ml-0 ml-auto leading-none text-sm pr-3 py-1 border-r-2 border-gray-200">
+                  <svg class="w-4 h-4 mr-1" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z" />
+                  </svg>
+                  24
+                </span>
+                <span class="text-gray-400 inline-flex items-center leading-none text-sm">
+                  <svg class="w-4 h-4 mr-1" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24">
+                    <path d="M21 11.5a8.38 8.38 0 01-.9 3.8 8.5 8.5 0 01-7.6 4.7 8.38 8.38 0 01-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 01-.9-3.8 8.5 8.5 0 014.7-7.6 8.38 8.38 0 013.8-.9h.5a8.48 8.48 0 018 8v.5z" />
+                  </svg>
+                  89
+                </span>
+              </div>
             </div>
           </div>
         </div>
+        <div class="p-4 md:w-1/3">
+          <div class="h-full border-2 border-gray-200 border-opacity-60 rounded-lg overflow-hidden">
+            <div class="w-full">
+              <div class="w-full flex p-2">
+                <div class="p-2 ">
+                  <img
+                    src="https://firebasestorage.googleapis.com/v0/b/thecaffeinecode.appspot.com/o/Tcc_img%2Flogo.png?alt=media&token=5e5738c4-8ffd-44f9-b47a-57d07e0b7939" alt="author"
+                    class="w-10 h-10 rounded-full overflow-hidden"
+                  >
+                </div>
+                <div class="pl-2 pt-2 ">
+                  <p class="font-bold">
+                    Vipin Bansal
+                  </p>
+                  <p class="text-xs">
+                    2 June 2022
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <img class="lg:h-48 md:h-36 w-full object-cover object-center" src="https://firebasestorage.googleapis.com/v0/b/thecaffeinecode.appspot.com/o/blog.jpg?alt=media&token=271cb624-94d4-468d-a14d-455377ba75c2" alt="blog cover">
+
+            <div class="p-4">
+              <h2 class="tracking-widest text-xs title-font font-bold text-green-400 mb-1 uppercase ">
+                Web development
+              </h2>
+              <h1 class="title-font text-lg font-medium text-gray-900 mb-3">
+                This is a blog template
+              </h1>
+              <div class="flex items-center flex-wrap ">
+                <a href="/" class="text-green-800  md:mb-2 lg:mb-0">
+                  <p class="inline-flex items-center">Read Blog
+                    <svg class="w-4 h-4 ml-2" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                      <path d="M5 12h14" />
+                      <path d="M12 5l7 7-7 7" />
+                    </svg>
+                  </p>
+                </a>
+                <span class="text-gray-400 mr-3 inline-flex items-center lg:ml-auto md:ml-0 ml-auto leading-none text-sm pr-3 py-1 border-r-2 border-gray-200">
+                  <svg class="w-4 h-4 mr-1" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z" />
+                  </svg>
+                  24
+                </span>
+                <span class="text-gray-400 inline-flex items-center leading-none text-sm">
+                  <svg class="w-4 h-4 mr-1" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24">
+                    <path d="M21 11.5a8.38 8.38 0 01-.9 3.8 8.5 8.5 0 01-7.6 4.7 8.38 8.38 0 01-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 01-.9-3.8 8.5 8.5 0 014.7-7.6 8.38 8.38 0 013.8-.9h.5a8.48 8.48 0 018 8v.5z" />
+                  </svg>
+                  89
+                </span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="p-4 md:w-1/3">
+          <div class="h-full border-2 border-gray-200 border-opacity-60 rounded-lg overflow-hidden">
+            <div class="w-full">
+              <div class="w-full flex p-2">
+                <div class="p-2 ">
+                  <img
+                    src="https://firebasestorage.googleapis.com/v0/b/thecaffeinecode.appspot.com/o/Tcc_img%2Flogo.png?alt=media&token=5e5738c4-8ffd-44f9-b47a-57d07e0b7939" alt="author"
+                    class="w-10 h-10 rounded-full overflow-hidden"
+                  >
+                </div>
+                <div class="pl-2 pt-2 ">
+                  <p class="font-bold">
+                    Vipin Bansal
+                  </p>
+                  <p class="text-xs">
+                    2 June 2022
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <img class="lg:h-48 md:h-36 w-full object-cover object-center" src="https://firebasestorage.googleapis.com/v0/b/thecaffeinecode.appspot.com/o/blog.jpg?alt=media&token=271cb624-94d4-468d-a14d-455377ba75c2" alt="blog cover">
+
+            <div class="p-4">
+              <h2 class="tracking-widest text-xs title-font font-bold text-green-400 mb-1 uppercase ">
+                Web development
+              </h2>
+              <h1 class="title-font text-lg font-medium text-gray-900 mb-3">
+                This is a blog template
+              </h1>
+              <div class="flex items-center flex-wrap ">
+                <a href="/" class="text-green-800  md:mb-2 lg:mb-0">
+                  <p class="inline-flex items-center">Read Blog
+                    <svg class="w-4 h-4 ml-2" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                      <path d="M5 12h14" />
+                      <path d="M12 5l7 7-7 7" />
+                    </svg>
+                  </p>
+                </a>
+                <span class="text-gray-400 mr-3 inline-flex items-center lg:ml-auto md:ml-0 ml-auto leading-none text-sm pr-3 py-1 border-r-2 border-gray-200">
+                  <svg class="w-4 h-4 mr-1" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z" />
+                  </svg>
+                  24
+                </span>
+                <span class="text-gray-400 inline-flex items-center leading-none text-sm">
+                  <svg class="w-4 h-4 mr-1" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24">
+                    <path d="M21 11.5a8.38 8.38 0 01-.9 3.8 8.5 8.5 0 01-7.6 4.7 8.38 8.38 0 01-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 01-.9-3.8 8.5 8.5 0 014.7-7.6 8.38 8.38 0 013.8-.9h.5a8.48 8.48 0 018 8v.5z" />
+                  </svg>
+                  89
+                </span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- End here -->
+      </div>
+    </div>
+  </section>
+
+  <section class="text-gray-600 body-font">
+    <div class="container px-5 py-5 mx-auto">
+      <div class="flex flex-wrap -m-4">
+        <!-- start here -->
+        <div class="p-4 md:w-1/3">
+          <div class="h-full border-2 border-gray-200 border-opacity-60 rounded-lg overflow-hidden">
+            <div class="w-full">
+              <div class="w-full flex p-2">
+                <div class="p-2 ">
+                  <img
+                    src="https://firebasestorage.googleapis.com/v0/b/thecaffeinecode.appspot.com/o/Tcc_img%2Flogo.png?alt=media&token=5e5738c4-8ffd-44f9-b47a-57d07e0b7939" alt="author"
+                    class="w-10 h-10 rounded-full overflow-hidden"
+                  >
+                </div>
+                <div class="pl-2 pt-2 ">
+                  <p class="font-bold">
+                    Vipin Bansal
+                  </p>
+                  <p class="text-xs">
+                    2 June 2022
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <img class="lg:h-48 md:h-36 w-full object-cover object-center" src="https://firebasestorage.googleapis.com/v0/b/thecaffeinecode.appspot.com/o/blog.jpg?alt=media&token=271cb624-94d4-468d-a14d-455377ba75c2" alt="blog cover">
+
+            <div class="p-4">
+              <h2 class="tracking-widest text-xs title-font font-bold text-green-400 mb-1 uppercase ">
+                Web development
+              </h2>
+              <h1 class="title-font text-lg font-medium text-gray-900 mb-3">
+                This is a blog template
+              </h1>
+              <div class="flex items-center flex-wrap ">
+                <a href="/" class="text-green-800  md:mb-2 lg:mb-0">
+                  <p class="inline-flex items-center">Read Blog
+                    <svg class="w-4 h-4 ml-2" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                      <path d="M5 12h14" />
+                      <path d="M12 5l7 7-7 7" />
+                    </svg>
+                  </p>
+                </a>
+                <span class="text-gray-400 mr-3 inline-flex items-center lg:ml-auto md:ml-0 ml-auto leading-none text-sm pr-3 py-1 border-r-2 border-gray-200">
+                  <svg class="w-4 h-4 mr-1" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z" />
+                  </svg>
+                  24
+                </span>
+                <span class="text-gray-400 inline-flex items-center leading-none text-sm">
+                  <svg class="w-4 h-4 mr-1" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24">
+                    <path d="M21 11.5a8.38 8.38 0 01-.9 3.8 8.5 8.5 0 01-7.6 4.7 8.38 8.38 0 01-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 01-.9-3.8 8.5 8.5 0 014.7-7.6 8.38 8.38 0 013.8-.9h.5a8.48 8.48 0 018 8v.5z" />
+                  </svg>
+                  89
+                </span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="p-4 md:w-1/3">
+          <div class="h-full border-2 border-gray-200 border-opacity-60 rounded-lg overflow-hidden">
+            <div class="w-full">
+              <div class="w-full flex p-2">
+                <div class="p-2 ">
+                  <img
+                    src="https://firebasestorage.googleapis.com/v0/b/thecaffeinecode.appspot.com/o/Tcc_img%2Flogo.png?alt=media&token=5e5738c4-8ffd-44f9-b47a-57d07e0b7939" alt="author"
+                    class="w-10 h-10 rounded-full overflow-hidden"
+                  >
+                </div>
+                <div class="pl-2 pt-2 ">
+                  <p class="font-bold">
+                    Vipin Bansal
+                  </p>
+                  <p class="text-xs">
+                    2 June 2022
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <img class="lg:h-48 md:h-36 w-full object-cover object-center" src="https://firebasestorage.googleapis.com/v0/b/thecaffeinecode.appspot.com/o/blog.jpg?alt=media&token=271cb624-94d4-468d-a14d-455377ba75c2" alt="blog cover">
+
+            <div class="p-4">
+              <h2 class="tracking-widest text-xs title-font font-bold text-green-400 mb-1 uppercase ">
+                Web development
+              </h2>
+              <h1 class="title-font text-lg font-medium text-gray-900 mb-3">
+                This is a blog template
+              </h1>
+              <div class="flex items-center flex-wrap ">
+                <a href="/" class="text-green-800  md:mb-2 lg:mb-0">
+                  <p class="inline-flex items-center">Read Blog
+                    <svg class="w-4 h-4 ml-2" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                      <path d="M5 12h14" />
+                      <path d="M12 5l7 7-7 7" />
+                    </svg>
+                  </p>
+                </a>
+                <span class="text-gray-400 mr-3 inline-flex items-center lg:ml-auto md:ml-0 ml-auto leading-none text-sm pr-3 py-1 border-r-2 border-gray-200">
+                  <svg class="w-4 h-4 mr-1" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z" />
+                  </svg>
+                  24
+                </span>
+                <span class="text-gray-400 inline-flex items-center leading-none text-sm">
+                  <svg class="w-4 h-4 mr-1" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24">
+                    <path d="M21 11.5a8.38 8.38 0 01-.9 3.8 8.5 8.5 0 01-7.6 4.7 8.38 8.38 0 01-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 01-.9-3.8 8.5 8.5 0 014.7-7.6 8.38 8.38 0 013.8-.9h.5a8.48 8.48 0 018 8v.5z" />
+                  </svg>
+                  89
+                </span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="p-4 md:w-1/3">
+          <div class="h-full border-2 border-gray-200 border-opacity-60 rounded-lg overflow-hidden">
+            <div class="w-full">
+              <div class="w-full flex p-2">
+                <div class="p-2 ">
+                  <img
+                    src="https://firebasestorage.googleapis.com/v0/b/thecaffeinecode.appspot.com/o/Tcc_img%2Flogo.png?alt=media&token=5e5738c4-8ffd-44f9-b47a-57d07e0b7939" alt="author"
+                    class="w-10 h-10 rounded-full overflow-hidden"
+                  >
+                </div>
+                <div class="pl-2 pt-2 ">
+                  <p class="font-bold">
+                    Vipin Bansal
+                  </p>
+                  <p class="text-xs">
+                    2 June 2022
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <img class="lg:h-48 md:h-36 w-full object-cover object-center" src="https://firebasestorage.googleapis.com/v0/b/thecaffeinecode.appspot.com/o/blog.jpg?alt=media&token=271cb624-94d4-468d-a14d-455377ba75c2" alt="blog cover">
+
+            <div class="p-4">
+              <h2 class="tracking-widest text-xs title-font font-bold text-green-400 mb-1 uppercase ">
+                Web development
+              </h2>
+              <h1 class="title-font text-lg font-medium text-gray-900 mb-3">
+                This is a blog template
+              </h1>
+              <div class="flex items-center flex-wrap ">
+                <a href="/" class="text-green-800  md:mb-2 lg:mb-0">
+                  <p class="inline-flex items-center">Read Blog
+                    <svg class="w-4 h-4 ml-2" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                      <path d="M5 12h14" />
+                      <path d="M12 5l7 7-7 7" />
+                    </svg>
+                  </p>
+                </a>
+                <span class="text-gray-400 mr-3 inline-flex items-center lg:ml-auto md:ml-0 ml-auto leading-none text-sm pr-3 py-1 border-r-2 border-gray-200">
+                  <svg class="w-4 h-4 mr-1" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z" />
+                  </svg>
+                  24
+                </span>
+                <span class="text-gray-400 inline-flex items-center leading-none text-sm">
+                  <svg class="w-4 h-4 mr-1" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24">
+                    <path d="M21 11.5a8.38 8.38 0 01-.9 3.8 8.5 8.5 0 01-7.6 4.7 8.38 8.38 0 01-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 01-.9-3.8 8.5 8.5 0 014.7-7.6 8.38 8.38 0 013.8-.9h.5a8.48 8.48 0 018 8v.5z" />
+                  </svg>
+                  89
+                </span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- End here -->
       </div>
     </div>
   </section>
