@@ -1,13 +1,18 @@
 <script setup>
 import { usePrismic } from '@prismicio/vue'
 import { useAboutStore } from '~/store/about.stores'
+const title = ref()
+
+const { isFetching, error, data } = await useFetch('https://jsonplaceholder.typicode.com/users/1')
+
+console.log(JSON.parse(data.value).name)
 
 const { asText, asImageSrc } = usePrismic()
 const about = useAboutStore()
 about.fetchAboutDocument()
 
 useHead({
-  title: 'Benefeed - About',
+  title: `${JSON.parse(data.value).name} Benefeed - About`,
   meta: [
     { name: 'description', content: 'Lorem Ipsum adalah contoh teks atau dummy dalam industri percetakan dan penataan huruf atau typesetting' },
   ],
