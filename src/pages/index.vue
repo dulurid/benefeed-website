@@ -6,7 +6,7 @@ import FeaturedSection from '~/components/slices/FeaturedSection.vue'
 import { useHomeStore } from '~/store/home.stores'
 
 const home = useHomeStore()
-await home.fetchHomeDocument()
+home.fetchHomeDocument()
 
 useHead({
   title: 'Benefeed - Home',

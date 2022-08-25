@@ -5,7 +5,9 @@ import CareerCard from '~/components/ui/CareerCard.vue'
 const { asText, asImageSrc } = usePrismic()
 const careerStore = useCareersStore()
 
-careerStore.fetchAll()
+onMounted(() => {
+  careerStore.fetchAll()
+})
 </script>
 
 <template>
@@ -52,7 +54,9 @@ careerStore.fetchAll()
     </div>
   </section>
 
-  <section id="careers-list" class="max-w-7xl mx-auto px-4 mt-16">
+  <div v-if="careerStore.isLoading" />
+
+  <section v-else id="careers-list" class="max-w-7xl mx-auto px-4 mt-16">
     <h2>Available jobs</h2>
     <div class=" grid grid-cols-3 gap-8 mt-8">
       <CareerCard

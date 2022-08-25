@@ -5,7 +5,7 @@ const uid = router.params.uid
 
 const store = useProductStore()
 
-store.fetchProductDetail(uid)
+store.fetchAll(uid)
 </script>
 
 <template>

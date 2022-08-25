@@ -8,7 +8,7 @@ export const useProductStore = defineStore('product', {
     product: {},
   }),
   actions: {
-    async fetchProductDocuments() {
+    async fetchAll() {
       this.isLoading = true
 
       const { client: prismic, predicate } = usePrismic()
@@ -19,7 +19,7 @@ export const useProductStore = defineStore('product', {
 
       this.isLoading = false
     },
-    async fetchProductDetail(uid: string) {
+    async fetchDetail(uid: string) {
       this.isLoading = true
 
       const { client: prismic } = usePrismic()

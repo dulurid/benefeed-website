@@ -4,10 +4,10 @@ import ProductCard from '~/components/ui/ProductCard.vue'
 import LoadingProduct from '~/components/ui/LoadingProductCard.vue'
 
 const productStore = useProductStore()
-const { isLoading, products } = storeToRefs(productStore)
 
-const { fetchProductDocuments } = useProductStore()
-fetchProductDocuments()
+onMounted(() => {
+  productStore.fetchAll()
+})
 </script>
 
 <template>
@@ -15,7 +15,7 @@ fetchProductDocuments()
     <h1 class="mb-8">
       Our Products
     </h1>
-    <div v-if="isLoading" class="grid grid-cols-2 gap-8">
+    <div v-if="productStore.isLoading" class="grid grid-cols-2 gap-8">
       <LoadingProduct />
       <LoadingProduct />
       <LoadingProduct />
@@ -24,7 +24,7 @@ fetchProductDocuments()
 
     <div v-else class="grid grid-cols-2 gap-8">
       <ProductCard
-        v-for="product in products"
+        v-for="product in productStore.products"
         :key="product.id"
         caption="Product caption"
         title="Product title"
