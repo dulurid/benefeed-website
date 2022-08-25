@@ -4,6 +4,7 @@ import { usePrismic } from '@prismicio/vue'
 export const useHomeStore = defineStore('home', {
   state: () => ({
     isLoading: true,
+    isFinished: false,
     heros: {
       headline: '',
       description: '',
@@ -18,8 +19,8 @@ export const useHomeStore = defineStore('home', {
     async fetchHomeDocument() {
       this.isLoading = true
 
-      const { client: prismic } = usePrismic()
-      const document = await prismic.getSingle('home_page')
+      const { client } = usePrismic()
+      const document = await client.getSingle('home_page')
       console.log(document)
 
       this.heros = {
@@ -31,7 +32,6 @@ export const useHomeStore = defineStore('home', {
           imageLeft: document.data.herosimg2,
         },
       }
-
       this.isLoading = false
     },
   },

@@ -17,6 +17,10 @@
   h1 {
     @apply text-3xl font-extrabold leading-none max-w-5xl tracking-normal text-gray-900 sm:text-6xl md:text-4xl lg:text-5xl md:tracking-tight
   }
+
+  h2 {
+    @apply font-extrabold leading-none tracking-normal text-gray-900 md:text-xl lg:text-4xl md:tracking-tight
+  }
 }
 
 @layer components {

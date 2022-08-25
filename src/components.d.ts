@@ -7,6 +7,7 @@ export {}
 
 declare module '@vue/runtime-core' {
   export interface GlobalComponents {
+    CareerCard: typeof import('./components/ui/CareerCard.vue')['default']
     Counter: typeof import('./components/Counter.vue')['default']
     FeaturedSection: typeof import('./components/slices/FeaturedSection.vue')['default']
     Footer: typeof import('./components/Footer.vue')['default']

@@ -17,7 +17,8 @@ useHead({
 </script>
 
 <template>
-  <HerosSection />
+  <div v-if="home.isLoading" class=" h-screen" />
+  <HerosSection v-else />
   <FeaturedSection />
   <ProductSection />
 </template>
