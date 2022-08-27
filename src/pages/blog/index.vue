@@ -1,8 +1,9 @@
 <script setup>
 import { usePrismic } from '@prismicio/vue'
 import BlogCard from '~/components/ui/BlogCard.vue'
+import LoadingProductCard1 from '~/components/ui/LoadingProductCard.vue'
 
-const { asText, asImageSrc } = usePrismic()
+const { asText, asImageSrc, asDate } = usePrismic()
 const blogStore = useBlogsStore()
 
 onMounted(() => {
@@ -11,66 +12,64 @@ onMounted(() => {
 </script>
 
 <template>
-  <section id="careers-heros" class="max-w-7xl mx-auto px-4 mt-8">
-    <div class="grid grid-cols-2 gap-8">
-      <div class="flex flex-col items-start justify-center ">
-        <h1>Lets join to our team</h1>
-        <p class=" mt-4 max-w-lg">
-          Our mission is to be the best local partner for our institutional and retail clients. We recognize that the investment industry is changing rapidly with technology.
-        </p>
-      </div>
+  <section class="bg-white  mx-auto max-w-7xl">
+    <div class=" w-full px-5 py-6 mx-auto space-y-5 sm:py-8 md:py-12 sm:space-y-8  md:space-y-16 max-w-7xl">
+      <div class="flex flex-col items-center rounded-2xl bg-neutral-50 md:flex-row shadow-xl ">
+        <div class="w-full md:w-1/2">
+          <a href="#_" class="block">
+            <img
+              data-aos="fade-right" class="h-full max-h-64 w-full rounded-lg object-cover sm:max-h-96"
+              :src="asImageSrc(blogStore.blogs[0].image)"
+            >
+          </a>
+        </div>
+        <div class="mb-6 flex h-full w-full flex-col items-start justify-center py-6 md:mb-0 md:w-1/2">
+          <div
+            class="flex h-full transform flex-col items-start justify-center space-y-3 md:space-y-5 md:pl-10 lg:pl-16"
+          >
+            <div
+              class="inline-block flex items-center rounded-full bg-green-500 py-1.5 pl-2 pr-3 text-xs font-medium uppercase leading-none text-white"
+            >
+              <svg class="mr-1 h-3.5 w-3.5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"
+                />
+              </svg>
+              <span>Newest</span>
+            </div>
+            <h2 class="text-4xl font-bold leading-none  text-justify  lg:text-3xl xl:text-5xl">
+              <p> {{ asText(blogStore.blogs[0].title) }}</p>
+              <p class="pt-3 pr-6 text-neutral-500 text-sm font-normal">
+                {{ asText(blogStore.blogs[0].content) }}
+              </p>
 
-      <div>
-        <div class=" grid grid-cols-3 gap-4">
-          <div class="flex flex-col gap-4">
-            <div class="h-[150px] w-full bg-gray-50">
-              <img class="h-[150px] w-full object-cover" src="https://images.unsplash.com/photo-1552664730-d307ca884978?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1740&q=80" alt="">
-            </div>
-
-            <div class="h-[250px] w-full bg-gray-50">
-              <img class="h-[250px] w-full object-cover" src="https://images.unsplash.com/photo-1524758870432-af57e54afa26?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=774&q=80" alt="">
-            </div>
-          </div>
-          <div class="flex flex-col gap-4">
-            <div class="h-[250px] w-full bg-gray-50">
-              <img class="h-[250px] w-full object-cover" src="https://images.unsplash.com/photo-1577415124269-fc1140a69e91?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=928&q=80" alt="">
-            </div>
-
-            <div class="h-[150px] w-full bg-gray-50">
-              <img class="h-[150px] w-full object-cover" src="https://images.unsplash.com/photo-1552581234-26160f608093?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1740&q=80" alt="">
-            </div>
-          </div>
-          <div class="flex flex-col gap-4">
-            <div class="h-[200px] w-full bg-gray-50">
-              <img class="h-[200px] w-full object-cover" src="https://images.unsplash.com/photo-1556761175-b413da4baf72?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1548&q=80" alt="">
-            </div>
-
-            <div class="h-[200px] w-full bg-gray-50">
-              <img class="h-[200px] w-full object-cover" src="https://images.unsplash.com/photo-1556761175-4b46a572b786?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1548&q=80" alt="">
-            </div>
+              <p class="pt-2 text-sm font-medium">
+                Posted by <span class="mr-1 underline">{{ blogStore.blogs[0].author }}</span>.
+              </p>
+            </h2>
           </div>
         </div>
       </div>
     </div>
   </section>
 
-  <div v-if="blogStore.isLoading" />
+  <section id="page-blogs" class="w-full bg-white py-10 mx-auto max-w-7xl md:px-8">
+    <div v-if="blogStore.isLoading" class=" grid grid-cols-12 gap-5 pb-10">
+      <LoadingBlogCard />
+      <LoadingBlogCard />
+      <LoadingBlogCard />
+      <LoadingBlogCard />
+      <LoadingBlogCard />
+      <LoadingBlogCard />
+    </div>
 
-  <section v-else id="careers-list" class="max-w-7xl mx-auto px-4 mt-16">
-    <h2>Available jobs</h2>
-    <div class=" grid grid-cols-3 gap-8 mt-8">
+    <div v-else class=" grid grid-cols-12 gap-5 pb-10">
       <BlogCard
-        v-for="blog in blogStore.blogs" :key="blog.uid"
-        :title="asText(blog.title)"
-        :content="asText(blog.content)"
-        :author="asText(blog.author)"
-        image-url="https://images.prismic.io/benefeeddulur/84ec9bfd-b5dc-48eb-a754-8bb37aa74d04_career-man-example.png?auto=compress,format"
+        v-for="blog in blogStore.blogs" :key="blog.uid" :title="asText(blog.title)"
+        :content="asText(blog.content)" :author="blog.author" :image="asImageSrc(blog.image)"
         :to="`/blog /${blog.uid}`"
       />
     </div>
   </section>
 </template>
 
-<style lang="scss" scoped>
-
-</style>
