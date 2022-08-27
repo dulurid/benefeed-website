@@ -13,7 +13,7 @@ export const useBlogsStore = defineStore('blogs', {
     async fetchAll() {
       this.isLoading = true
 
-      const { client: prismic, predicate } = usePrismic()
+      const { client: prismic, predicate, asText } = usePrismic()
       const document = await prismic.query(predicate.at('document.type', 'blogs'), {
         orderings: {
           field: 'document.first_publication_date',
@@ -22,12 +22,11 @@ export const useBlogsStore = defineStore('blogs', {
       })
 
       const results = document.results
-      console.log(results)
-
       this.blogs = results.map((item) => {
+        console.log(item.data.title)
         return {
           uid: item.uid,
-          title: item.data.title,
+          title: asText(item.data.title),
           content: item.data.content,
           author: item.data.author,
           image: item.data.thumbnail,

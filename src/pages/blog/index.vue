@@ -42,7 +42,7 @@ onMounted(() => {
                 <span>Newest</span>
               </div>
               <h2 class="text-4xl font-bold leading-none  text-justify  lg:text-3xl xl:text-5xl">
-                <p> {{ asText(blogStore.featuredBlog.title) }}</p>
+                <p> {{ blogStore.featuredBlog.title }}</p>
                 <p class="pt-3 pr-6 text-neutral-500 text-sm font-normal">
                   {{ asText(blogStore.featuredBlog.content) }}
                 </p>
@@ -63,7 +63,7 @@ onMounted(() => {
         </div>
       </div>
       <BlogCard
-        v-for="blog in blogStore.blogs" :key="blog.uid" :title="asText(blog.title)" :date="blog.date"
+        v-for="blog in blogStore.blogs" :key="blog.uid" :title="blog.title" :date="blog.date"
         :content="asText(blog.content)" :author="blog.author" :image="asImageSrc(blog.image)"
         :to="`/blog /${blog.uid}`"
       >
