@@ -23,7 +23,8 @@ export const useBlogsStore = defineStore('blogs', {
           title: item.data.title,
           content: item.data.content,
           author: item.data.author,
-          imageUrl: item.data.thumbnail,
+          image: item.data.thumbnail,
+          date: item.data.first_publication_date,
         }
       })
 
