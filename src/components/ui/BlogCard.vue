@@ -1,35 +1,37 @@
 <script>
 export default {
   props: {
-    title: { type: [String], requried: true },
-    content: { type: [String], requried: true },
-    author: { type: [String], requried: true },
-    image: { type: [String], requried: true },
-
+    title: { type: [String], required: true },
+    content: { type: [String], required: true },
+    author: { type: [String], required: true },
+    image: { type: [String], required: true },
+    date: { type: [String], required: true },
   },
 }
 </script>
 
 <template>
   <div
-    class="flex flex-col  col-span-12 space-y-3 shadow-xl  p-4 rounded-xl item-center bg-neutral-50 sm:col-span-6 xl:col-span-4"
+    class="flex flex-col space-y-3 shadow p-4 rounded-xl bg-neutral-50"
   >
-    <a class="block items-center">
+    <div class="block items-center">
       <img
         class="object-cover w-full mb-2 overflow-hidden rounded-lg shadow-sm max-h-56"
         :src="image"
       >
-    </a>
+    </div>
     <h2 class="text-lg font-bold sm:text-xl md:text-2xl">
       {{ title }}
     </h2>
-    <p class="text-sm text-gray-500 text-justify">
+    <p class="text-sm text-gray-500 line-clamp-2">
       {{ content }}
     </p>
     <p class="pt-2 text-xs font-medium">
       Posted By <a class="mr-1 underline">{{ author }}</a> · <span class="mx-1">{{ date }}</span> ·
     </p>
-    <slot />
+    <div class="flex">
+      <slot />
+    </div>
   </div>
 </template>
 

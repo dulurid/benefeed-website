@@ -1,10 +1,12 @@
 import { acceptHMRUpdate, defineStore } from 'pinia'
 import { usePrismic } from '@prismicio/vue'
+import dayjs from 'dayjs'
 
 export const useBlogsStore = defineStore('blogs', {
   state: () => ({
     isLoading: true,
     blogs: [{}],
+    featuredBlog: {},
     blog: {},
   }),
   actions: {
@@ -12,21 +14,29 @@ export const useBlogsStore = defineStore('blogs', {
       this.isLoading = true
 
       const { client: prismic, predicate } = usePrismic()
-      const document = await prismic.query(predicate.at('document.type', 'blogs'))
-      console.log(document)
+      const document = await prismic.query(predicate.at('document.type', 'blogs'), {
+        orderings: {
+          field: 'document.first_publication_date',
+          direction: 'desc',
+        },
+      })
 
       const results = document.results
+      console.log(results)
+
       this.blogs = results.map((item) => {
         return {
-
           uid: item.uid,
           title: item.data.title,
           content: item.data.content,
           author: item.data.author,
           image: item.data.thumbnail,
-          date: item.data.first_publication_date,
+          date: dayjs(item.first_publication_date).format('DD-MM-YYYY'),
         }
       })
+
+      this.featuredBlog = this.blogs[0]
+      this.blogs.splice(0, 1)
 
       this.isLoading = false
     },

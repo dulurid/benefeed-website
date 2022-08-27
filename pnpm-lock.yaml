@@ -6,6 +6,7 @@ specifiers:
   '@fontsource/manrope': ^4.5.11
   '@intlify/vite-plugin-vue-i18n': ^6.0.1
   '@prismicio/vue': ^3.0.0
+  '@tailwindcss/line-clamp': ^0.4.0
   '@types/markdown-it-link-attributes': ^3.0.1
   '@types/nprogress': ^0.2.0
   '@vitejs/plugin-vue': ^3.0.3
@@ -16,6 +17,7 @@ specifiers:
   critters: ^0.0.16
   cross-env: ^7.0.3
   cypress: ^10.6.0
+  dayjs: ^1.11.5
   eslint: ^8.22.0
   eslint-plugin-cypress: ^2.12.1
   https-localhost: ^4.7.1
@@ -50,6 +52,7 @@ dependencies:
   '@prismicio/vue': 3.0.0_vue@3.2.37
   '@vueuse/core': 9.1.0_vue@3.2.37
   '@vueuse/head': 0.7.9_vue@3.2.37
+  dayjs: 1.11.5
   nprogress: 0.2.0
   pinia: 2.0.18_j6bzmzd4ujpabbp5objtwxyjp4
   vue: 3.2.37
@@ -60,6 +63,7 @@ dependencies:
 devDependencies:
   '@antfu/eslint-config': 0.25.2_4rv7y5c6xz3vfxwhbrcxxi73bq
   '@intlify/vite-plugin-vue-i18n': 6.0.1_vite@3.0.8+vue-i18n@9.2.2
+  '@tailwindcss/line-clamp': 0.4.0_tailwindcss@3.1.8
   '@types/markdown-it-link-attributes': 3.0.1
   '@types/nprogress': 0.2.0
   '@vitejs/plugin-vue': 3.0.3_vite@3.0.8+vue@3.2.37
@@ -1822,6 +1826,14 @@ packages:
       string.prototype.matchall: 4.0.7
     dev: true
 
+  /@tailwindcss/line-clamp/0.4.0_tailwindcss@3.1.8:
+    resolution: {integrity: sha512-HQZo6gfx1D0+DU3nWlNLD5iA6Ef4JAXh0LeD8lOGrJwEDBwwJNKQza6WoXhhY1uQrxOuU8ROxV7CqiQV4CoiLw==}
+    peerDependencies:
+      tailwindcss: '>=2.0.0 || >=3.0.0 || >=3.0.0-alpha.1'
+    dependencies:
+      tailwindcss: 3.1.8_postcss@8.4.16
+    dev: true
+
   /@tootallnate/once/2.0.0:
     resolution: {integrity: sha512-XCuKFP5PS55gnMVu3dty8KPatLqUoy/ZYzDzAGCQ8JNFCkLXzmI7vNHCR+XpbZaMWQK/vQubr7PkYq8g470J/A==}
     engines: {node: '>= 10'}
@@ -3138,7 +3150,6 @@ packages:
 
   /dayjs/1.11.5:
     resolution: {integrity: sha512-CAdX5Q3YW3Gclyo5Vpqkgpj8fSdLQcRuzfX6mC6Phy0nfJ0eGYOeS7m4mt2plDWLAtA4TqTakvbboHvUxfe4iA==}
-    dev: true
 
   /debug/2.6.9:
     resolution: {integrity: sha512-bC7ElrdJaJnPbAP+1EotYvqZsb3ecl5wi6Bfi6BJTUcNowp6cvspg0jXznRTKDjm/E7AdgFBVeAPVMNcKGsHMA==}
