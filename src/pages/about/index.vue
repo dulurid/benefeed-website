@@ -20,12 +20,11 @@ useHead({
       <div class="bg-neutral-50">
         <div class="container mx-auto px-6">
           <div class="items-center justify-between p-5 lg:flex">
-            <div class=" lg:w-6/12 lg:p-0">
-              <h1 class="mb-3 text-4xl text-left font-bold capitalize leading-none text-neutral-900 sm:text-4xl">
+            <div class=" lg:w-7/12 lg:p-0">
+              <h1 class="mb-4 text-left font-bold  leading-none text-neutral-900 sm:text-5xl">
                 {{ asText(about.heros.title) }}
-                <hr>
               </h1>
-              <p class="text-sm leading-5 font-normal text-neutral-800 text-justify">
+              <p class="leading-5 font-normal text-neutral-500 ">
                 {{ asText(about.heros.description) }}
               </p>
             </div>
