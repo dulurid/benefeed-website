@@ -16,7 +16,6 @@ declare module '@vue/runtime-core' {
     HerosSection: typeof import('./components/slices/HerosSection.vue')['default']
     LineCharts: typeof import('./components/LineCharts.vue')['default']
     LoadingBlogCard: typeof import('./components/ui/LoadingBlogCard.vue')['default']
-    LoadingBlogsCard: typeof import("./components/ui/LoadingBlogsCard.vue")["default"]
     LoadingProductCard: typeof import('./components/ui/LoadingProductCard.vue')['default']
     Logo: typeof import('./components/Logo.vue')['default']
     ProductCard: typeof import('./components/ui/ProductCard.vue')['default']

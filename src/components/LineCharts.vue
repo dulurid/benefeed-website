@@ -1,10 +1,13 @@
-<script>
-import VueApexCharts from 'vue3-apexcharts'
+<script setup>
+import { defineAsyncComponent } from 'vue'
 
+const ApexChart = defineAsyncComponent(() =>
+  import('vue3-apexcharts'),
+)
+</script>
+
+<script>
 export default {
-  components: {
-    Apexchart: VueApexCharts,
-  },
   data() {
     return {
       series: [{
@@ -62,6 +65,8 @@ export default {
 
 <template>
   <div>
-    <Apexchart type="area" height="450" :options="chartOptions" :series="series" />
+    <client-only>
+      <ApexChart type="area" height="450" :options="chartOptions" :series="series" />
+    </client-only>
   </div>
 </template>
