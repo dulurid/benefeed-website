@@ -11,13 +11,12 @@ export default {
 </script>
 
 <template>
-  <div
-    class="flex flex-col space-y-3 shadow p-4 rounded-xl bg-neutral-50"
-  >
+  <div class="flex flex-col space-y-3 shadow p-4 rounded-xl bg-neutral-50">
     <div class="block items-center">
       <img
         class="object-cover w-full mb-2 overflow-hidden rounded-lg shadow-sm max-h-56"
         :src="image"
+        alt=""
       >
     </div>
     <h2 class="text-lg font-bold sm:text-xl md:text-2xl">
@@ -27,11 +26,11 @@ export default {
       {{ content }}
     </p>
     <p class="pt-2 text-xs font-medium">
-      Posted By <a class="mr-1 underline">{{ author }}</a> · <span class="mx-1">{{ date }}</span> ·
+      Posted By <a class="mr-1 underline">{{ author }}</a> ·
+      <span class="mx-1">{{ date }}</span> ·
     </p>
     <div class="flex">
       <slot />
     </div>
   </div>
 </template>
-

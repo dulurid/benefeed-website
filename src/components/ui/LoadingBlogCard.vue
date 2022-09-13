@@ -1,7 +1,5 @@
 <template>
-  <div
-    class="flex flex-col space-y-3 shadow-xl  p-4 rounded-xl item-center bg-neutral-50"
-  >
+  <div class="flex flex-col space-y-3 shadow-xl  p-4 rounded-xl item-center bg-neutral-50">
     <div class="h-4 bg-gray-200 rounded-full animate-pulse w-16" />
 
     <div class="h-8 mt-5 mb-4 bg-gray-200 rounded-full animate-pulse w-full" />
@@ -14,5 +12,4 @@
 </template>
 
 <style lang="scss" scoped>
-
 </style>

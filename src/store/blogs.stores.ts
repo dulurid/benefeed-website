@@ -7,19 +7,25 @@ export const useBlogsStore = defineStore('blogs', {
     isLoading: true,
     blogs: [{}],
     featuredBlog: {},
-    blog: {},
+    blog: {
+      title: '',
+    },
+    detailBlog: [{}],
   }),
   actions: {
     async fetchAll() {
       this.isLoading = true
 
       const { client: prismic, predicate, asText } = usePrismic()
-      const document = await prismic.query(predicate.at('document.type', 'blogs'), {
-        orderings: {
-          field: 'document.first_publication_date',
-          direction: 'desc',
+      const document = await prismic.query(
+        predicate.at('document.type', 'blogs'),
+        {
+          orderings: {
+            field: 'document.first_publication_date',
+            direction: 'desc',
+          },
         },
-      })
+      )
 
       const results = document.results
       this.blogs = results.map((item) => {
@@ -34,9 +40,21 @@ export const useBlogsStore = defineStore('blogs', {
         }
       })
 
-      this.featuredBlog = this.blogs[0]
-      this.blogs.splice(0, 1)
+      this.detailBlog = results.map((item) => {
+        console.log(item.data.title)
+        return {
+          uid: item.uid,
+          title: asText(item.data.title),
+          content: item.data.content,
+          author: item.data.author,
+          image: item.data.thumbnail,
+          date: dayjs(item.first_publication_date).format('DD-MM-YYYY'),
+        }
+      })
 
+      this.featuredBlog = this.blogs[0]
+      this.detailBlog.splice(3)
+      this.blogs.splice(0, 1)
       this.isLoading = false
     },
     async fetchDetail(uid: string) {
@@ -45,9 +63,16 @@ export const useBlogsStore = defineStore('blogs', {
       const { client: prismic } = usePrismic()
       const document = await prismic.getByUID('blogs', uid)
       console.log(document)
-
-      this.blog = document.data
-
+      this.blog = {
+        ...this.blog,
+        ...{
+          title: document.data.title,
+          author: document.data.author,
+          image: document.data.thumbnail,
+          content: document.data.content,
+          date: dayjs(document.first_publication_date).format('DD-MM-YYYY'),
+        },
+      }
       this.isLoading = false
     },
   },

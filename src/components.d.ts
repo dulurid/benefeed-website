@@ -8,6 +8,7 @@ export {}
 declare module '@vue/runtime-core' {
   export interface GlobalComponents {
     BlogCard: typeof import('./components/ui/BlogCard.vue')['default']
+    BlogDetailCard: typeof import('./components/ui/BlogDetailCard.vue')['default']
     CareerCard: typeof import('./components/ui/CareerCard.vue')['default']
     Counter: typeof import('./components/Counter.vue')['default']
     FeaturedSection: typeof import('./components/slices/FeaturedSection.vue')['default']
@@ -15,7 +16,6 @@ declare module '@vue/runtime-core' {
     Header: typeof import('./components/Header.vue')['default']
     HerosSection: typeof import('./components/slices/HerosSection.vue')['default']
     LoadingBlogCard: typeof import('./components/ui/LoadingBlogCard.vue')['default']
-    LoadingBlogsCard: typeof import("./components/ui/LoadingBlogsCard.vue")["default"]
     LoadingProductCard: typeof import('./components/ui/LoadingProductCard.vue')['default']
     Logo: typeof import('./components/Logo.vue')['default']
     ProductCard: typeof import('./components/ui/ProductCard.vue')['default']
@@ -23,5 +23,6 @@ declare module '@vue/runtime-core' {
     README: typeof import('./components/README.md')['default']
     RouterLink: typeof import('vue-router')['RouterLink']
     RouterView: typeof import('vue-router')['RouterView']
+    SideBlogCard: typeof import('./components/ui/SideBlogCard.vue')['default']
   }
 }
