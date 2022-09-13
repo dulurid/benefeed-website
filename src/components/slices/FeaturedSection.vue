@@ -1,3 +1,9 @@
+<script setup>
+import LineCharts from '~/components/LineCharts.vue'
+const target = ref(null)
+const targetIsVisible = useElementVisibility(target)
+</script>
+
 <template>
   <section class="h-auto bg-white">
     <div class="px-10 pt-24 mx-auto max-w-7xl">
@@ -17,7 +23,11 @@
             <div class="col-span-12">
               <div class="bg-transparent p-2 relative">
                 <div class="absolute inset-0 opacity-10 blur-xl animate-pulse" style="background-image:linear-gradient(120deg, #5145cd -0.55%, #37BDF9 22.86%, #37BDF9 48.36%, #17BC9B 73.33%, #17BC9B 99.34%)" />
-                <div class="bg-white h-[450px] py-10 px-10 sm:w-full relative sm:mx-auto sm:rounded-lg sm:overflow-hidden" />
+                <div class="bg-white h-[450px] py-10  sm:w-full relative sm:mx-auto sm:rounded-lg sm:overflow-hidden">
+                  <div ref="target">
+                    <LineCharts v-if="targetIsVisible" />
+                  </div>
+                </div>
               </div>
             </div>
             <img src="/illustrations/image_1.png" class="absolute bottom-0 translate-y-40 sm:block hidden left-1/2 ml-40 lg:mb-0 -mb-8 lg:-ml-20 transform w-48 h-auto">
